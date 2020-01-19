@@ -542,10 +542,10 @@ position = Vector2( 1919.67, 611.846 )
 [node name="CableHanging" parent="Level/Level Details" instance=ExtResource( 3 )]
 
 [node name="Sparks" parent="Level/Level Details" instance=ExtResource( 4 )]
-frame = 17
+position = Vector2( 2605.33, 976.579 )
 
 [node name="DrippingGoo" parent="Level/Level Details" instance=ExtResource( 5 )]
-frame = 3
+position = Vector2( 1954.37, 354.552 )
 
 [node name="FloorGoo_A" parent="Level/Level Details" instance=ExtResource( 6 )]
 
@@ -554,7 +554,7 @@ frame = 3
 [node name="CornerGoo" parent="Level/Level Details" instance=ExtResource( 8 )]
 
 [node name="BigPannel" parent="Level/Level Details" instance=ExtResource( 9 )]
-frame = 14
+position = Vector2( 2912.4, 976.229 )
 
 [node name="Explosion_trigger" parent="Level" instance=ExtResource( 10 )]
 trigger_target_Paths = [ NodePath("../../CanvasLayer/Explosion"), NodePath("RoomAfterExplosion"), NodePath("Door_exploded"), NodePath("../Lights/Light_red"), NodePath("../Lights/Light_red2"), NodePath("../Lights/Light_red3") ]
@@ -644,7 +644,7 @@ position = Vector2( 3138, 643 )
 position = Vector2( 3585, 435 )
 
 [node name="Player" parent="." instance=ExtResource( 18 )]
-position = Vector2( 250.887, 1243.81 )
+position = Vector2( 2807.04, 1070.72 )
 
 [node name="Dash_upgrade" parent="." instance=ExtResource( 19 )]
 position = Vector2( 3700, 434 )
