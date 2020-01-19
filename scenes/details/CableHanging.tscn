@@ -23,11 +23,9 @@ animations = [ {
 [node name="Node2D" type="Node2D"]
 
 [node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
-position = Vector2( 2172.08, 733.004 )
 scale = Vector2( 1.29198, 1.39956 )
 
 [node name="CableHanging" type="AnimatedSprite" parent="."]
-position = Vector2( 201.388, 112.794 )
 z_index = 1
 frames = SubResource( 1 )
 playing = true
