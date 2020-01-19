@@ -1,8 +1,9 @@
 [gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://scenes/Light_red.gd" type="Script" id=1]
+[ext_resource path="res://scripts/Light_red.gd" type="Script" id=1]
 [ext_resource path="res://assets/Background/lightSmall.png" type="Texture" id=2]
 [ext_resource path="res://assets/Background/light_sprite.png" type="Texture" id=3]
+
 
 [sub_resource type="Animation" id=1]
 resource_name = "strobe"

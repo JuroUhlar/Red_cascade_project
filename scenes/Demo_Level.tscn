@@ -9,9 +9,9 @@
 [ext_resource path="res://scenes/details/FloorGoo_B8.tscn" type="PackedScene" id=7]
 [ext_resource path="res://scenes/details/CornerGoo.tscn" type="PackedScene" id=8]
 [ext_resource path="res://scenes/details/BigPannel.tscn" type="PackedScene" id=9]
-[ext_resource path="res://scripts/Explosion_trigger.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/Explosion_trigger.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/Background/red-cascade-initial-room-after-explosion.png" type="Texture" id=11]
-[ext_resource path="res://scenes/RoomAfterExplosion.gd" type="Script" id=12]
+[ext_resource path="res://scripts/RoomAfterExplosion.gd" type="Script" id=12]
 [ext_resource path="res://scenes/Door.tscn" type="PackedScene" id=13]
 [ext_resource path="res://scenes/Light_red.tscn" type="PackedScene" id=14]
 [ext_resource path="res://scenes/Enemy.tscn" type="PackedScene" id=15]
@@ -31,6 +31,8 @@
 [ext_resource path="res://scripts/Final_scenario.gd" type="Script" id=29]
 [ext_resource path="res://scenes/EnemyBoss.tscn" type="PackedScene" id=30]
 [ext_resource path="res://scenes/Enemy_spawn_point.tscn" type="PackedScene" id=31]
+
+
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 76, 10 )

@@ -1,6 +1,6 @@
 [gd_scene load_steps=20 format=2]
 
-[ext_resource path="res://Turret.gd" type="Script" id=1]
+[ext_resource path="res://scripts/Turret.gd" type="Script" id=1]
 [ext_resource path="res://scenes/turret_bullet.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/Turret/turret_deploy0.png" type="Texture" id=3]
 [ext_resource path="res://assets/Turret/turret_destroy_1.png" type="Texture" id=4]
@@ -17,6 +17,7 @@
 [ext_resource path="res://assets/Turret/turret_deploy5.png" type="Texture" id=15]
 [ext_resource path="res://assets/Turret/turret_deploy6.png" type="Texture" id=16]
 [ext_resource path="res://assets/Turret/turret_deploy7.png" type="Texture" id=17]
+
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
