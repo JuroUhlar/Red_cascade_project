@@ -1,4 +1,4 @@
-[gd_scene load_steps=89 format=2]
+[gd_scene load_steps=90 format=2]
 
 [ext_resource path="res://assets/Background/rc-level-demo-preview2.png" type="Texture" id=1]
 [ext_resource path="res://scenes/details/ForestFire.tscn" type="PackedScene" id=2]
@@ -30,9 +30,10 @@
 [ext_resource path="res://assets/UI/avatar.png" type="Texture" id=28]
 [ext_resource path="res://scenes/End_screen.tscn" type="PackedScene" id=29]
 [ext_resource path="res://assets/UI/Explosion.tscn" type="PackedScene" id=30]
-[ext_resource path="res://scripts/Final_scenario.gd" type="Script" id=31]
-[ext_resource path="res://scenes/EnemyBoss.tscn" type="PackedScene" id=32]
-[ext_resource path="res://scenes/Enemy_spawn_point.tscn" type="PackedScene" id=33]
+[ext_resource path="res://scenes/Pause_screen.tscn" type="PackedScene" id=31]
+[ext_resource path="res://scripts/Final_scenario.gd" type="Script" id=32]
+[ext_resource path="res://scenes/EnemyBoss.tscn" type="PackedScene" id=33]
+[ext_resource path="res://scenes/Enemy_spawn_point.tscn" type="PackedScene" id=34]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 76, 10 )
@@ -852,9 +853,11 @@ start_delay = 2
 
 [node name="Explosion" parent="CanvasLayer" instance=ExtResource( 30 )]
 
+[node name="Pause_screen" parent="CanvasLayer" instance=ExtResource( 31 )]
+
 [node name="Final_scenario_stuff" type="Node2D" parent="."]
 position = Vector2( 2711.43, 1336.58 )
-script = ExtResource( 31 )
+script = ExtResource( 32 )
 enemy_boss_path = NodePath("EnemyBoss")
 friendPath = NodePath("../Friend")
 wall_enemies = [ NodePath("Enemy_wall"), NodePath("Enemy_wall2"), NodePath("Enemy_wall3") ]
@@ -877,14 +880,14 @@ position = Vector2( 548.645, -380.819 )
 active = false
 wall_on_right = true
 
-[node name="EnemyBoss" parent="Final_scenario_stuff" instance=ExtResource( 32 )]
+[node name="EnemyBoss" parent="Final_scenario_stuff" instance=ExtResource( 33 )]
 hp = 40
 death_trigger_target_Paths = [ NodePath("../../Objects/Door_final"), NodePath("../Enemy_spawn_point"), NodePath("../upper_spawn_point_trigger") ]
 
-[node name="Enemy_spawn_point" parent="Final_scenario_stuff" instance=ExtResource( 33 )]
+[node name="Enemy_spawn_point" parent="Final_scenario_stuff" instance=ExtResource( 34 )]
 position = Vector2( -373.86, -253.018 )
 
-[node name="Enemy_spawn_point2" parent="Final_scenario_stuff" instance=ExtResource( 33 )]
+[node name="Enemy_spawn_point2" parent="Final_scenario_stuff" instance=ExtResource( 34 )]
 position = Vector2( 558.397, -382.911 )
 max_enemies = 4
 
