@@ -78,6 +78,7 @@ func _physics_process(delta):
 				projectile.set_projectile_direction(-1)
 			get_parent().add_child(projectile)
 			projectile.position = $gun_muzzle.global_position
+			camera_shake_shoot()
 			
 		if shooting:
 			gun_muzzle_sprite.play("shoot")
@@ -98,7 +99,9 @@ func _physics_process(delta):
 		elif !is_on_floor():
 			$Sprite.play("fall")
 		elif running: 
-			$Sprite.play("run")	
+			$Sprite.play("run")
+		elif shooting:
+			$Sprite.play("shoot")
 		else: $Sprite.play("idle")
 		
 		if $dash_cooldown.time_left > 0:
@@ -208,6 +211,12 @@ func _on_death_timer_timeout():
 	
 func get_dash():
 	dash_enabled = true
+	
+func camera_shake_shoot():
+	var duration = 0.1
+	var frequency = 10
+	var amplitude = 4 
+	$Camera2D.shake(duration,frequency,amplitude)
 
 
 
