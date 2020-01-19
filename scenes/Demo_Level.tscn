@@ -749,7 +749,7 @@ position = Vector2( 3138, 643 )
 position = Vector2( 3585, 435 )
 
 [node name="Player" parent="." instance=ExtResource( 21 )]
-position = Vector2( 1781.63, 753.451 )
+position = Vector2( 2727.09, 1079.94 )
 
 [node name="Dash_upgrade" parent="." instance=ExtResource( 22 )]
 position = Vector2( 3700, 434 )
@@ -873,7 +873,7 @@ friendPath = NodePath("../Friend")
 wall_enemies = [ NodePath("Enemy_wall"), NodePath("Enemy_wall2"), NodePath("Enemy_wall3") ]
 
 [node name="Final_button" parent="Final_scenario_stuff" instance=ExtResource( 25 )]
-position = Vector2( 340.749, -4.88889 )
+position = Vector2( 68.6738, -259.279 )
 targetPath = NodePath("..")
 
 [node name="Enemy_wall" parent="Final_scenario_stuff" instance=ExtResource( 19 )]
