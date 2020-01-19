@@ -44,6 +44,9 @@ func take_damage(damage):
 	hp -= damage
 	if hp <= 0:
 		die()
+	else:
+		$AnimationPlayer.play("hurt")
+		
 		
 func die():
 	dying = true

@@ -213,6 +213,7 @@ func _on_death_timer_timeout():
 	$CollisionShape2D.disabled = false
 	$CollisionShape2D.scale = Vector2.ONE
 	global_position = Global.latest_checkpoint_position
+	shooting = false
 	dying = false
 	
 func get_dash():

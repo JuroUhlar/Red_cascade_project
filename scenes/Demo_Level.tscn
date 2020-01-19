@@ -749,7 +749,7 @@ position = Vector2( 3138, 643 )
 position = Vector2( 3585, 435 )
 
 [node name="Player" parent="." instance=ExtResource( 21 )]
-position = Vector2( 3325.63, 895.158 )
+position = Vector2( 1781.63, 753.451 )
 
 [node name="Dash_upgrade" parent="." instance=ExtResource( 22 )]
 position = Vector2( 3700, 434 )
@@ -918,6 +918,7 @@ deactivate = true
 [node name="Trigger2" parent="Final_scenario_stuff/Door_final_safe" instance=ExtResource( 26 )]
 position = Vector2( -63.8691, 15.1146 )
 targetPath = NodePath("..")
+one_time = false
 
 [node name="Door_end" parent="Final_scenario_stuff" instance=ExtResource( 16 )]
 position = Vector2( 1467.57, -263.58 )

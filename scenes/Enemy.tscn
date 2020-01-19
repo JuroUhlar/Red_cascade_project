@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://scripts/Enemy.gd" type="Script" id=1]
 [ext_resource path="res://scenes/resources/Enemy_sprite_frames.tres" type="SpriteFrames" id=2]
@@ -8,6 +8,22 @@ extents = Vector2( 12.1487, 14.0321 )
 
 [sub_resource type="CircleShape2D" id=2]
 radius = 89.4891
+
+[sub_resource type="Animation" id=3]
+resource_name = "hurt"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ), Color( 1, 1, 1, 1 ) ]
+}
 
 [node name="Enemy" type="KinematicBody2D"]
 collision_layer = 2
@@ -54,5 +70,8 @@ collision_mask = 5
 
 [node name="nav_timer" type="Timer" parent="."]
 wait_time = 0.25
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/hurt = SubResource( 3 )
 [connection signal="body_entered" from="player_detector" to="." method="_on_player_detector_body_entered"]
 [connection signal="timeout" from="nav_timer" to="." method="_on_nav_timer_timeout"]
