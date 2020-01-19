@@ -1,4 +1,4 @@
-[gd_scene load_steps=46 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://scenes/player_bullet.tscn" type="PackedScene" id=2]
@@ -118,6 +118,22 @@ animations = [ {
 "speed": 20.0
 } ]
 
+[sub_resource type="Animation" id=12]
+resource_name = "hurt"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0.254902, 0.270588, 0.501961, 1 ), Color( 1, 1, 1, 1 ), Color( 0.254902, 0.270588, 0.501961, 1 ), Color( 1, 1, 1, 1 ) ]
+}
+
 [node name="Player" type="KinematicBody2D"]
 position = Vector2( 575.148, 436.146 )
 collision_mask = 12
@@ -194,6 +210,7 @@ frames = SubResource( 9 )
 animation = "idle"
 
 [node name="LightOccluder2D" type="LightOccluder2D" parent="Sprite"]
+visible = false
 occluder = SubResource( 10 )
 
 [node name="gun_muzzle" type="Position2D" parent="."]
@@ -211,6 +228,9 @@ volume_db = -6.058
 
 [node name="dash" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 34 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/hurt = SubResource( 12 )
 [connection signal="body_entered" from="enemy_detector" to="." method="_on_enemy_detector_body_entered"]
 [connection signal="timeout" from="dash_timer" to="." method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="gun_timer" to="." method="_on_gun_timer_timeout"]

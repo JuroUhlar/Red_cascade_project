@@ -202,6 +202,7 @@ func die():
 		$death_timer.start()
 	
 func take_damage(damage):
+	$AnimationPlayer.play("hurt")
 	hp -= damage
 	if hp <= 0:
 		die()
