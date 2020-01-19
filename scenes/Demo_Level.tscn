@@ -200,11 +200,12 @@ extents = Vector2( 746, 10 )
 
 [node name="Node" type="Node"]
 __meta__ = {
-"_edit_horizontal_guides_": [ 1474.49, 223.052 ],
-"_edit_vertical_guides_": [ 4201.98 ]
+"_edit_horizontal_guides_": [ 1474.49, 223.052, 1237.76 ],
+"_edit_vertical_guides_": [ 4201.98, 1234.82 ]
 }
 
 [node name="Level" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="LevelSprite" type="Sprite" parent="Level"]
 position = Vector2( 1, 1 )
@@ -542,6 +543,7 @@ position = Vector2( 1919.67, 611.846 )
 position = Vector2( 1409.08, 1478.04 )
 
 [node name="Level Details" type="Node" parent="Level"]
+editor/display_folded = true
 
 [node name="CableHanging" parent="Level/Level Details" instance=ExtResource( 4 )]
 position = Vector2( 637, 1217 )
@@ -736,7 +738,7 @@ position = Vector2( 3138, 643 )
 position = Vector2( 3585, 435 )
 
 [node name="Player" parent="." instance=ExtResource( 19 )]
-position = Vector2( 317.935, 1231.19 )
+position = Vector2( 1248.46, 1239.61 )
 
 [node name="Dash_upgrade" parent="." instance=ExtResource( 20 )]
 position = Vector2( 3700, 434 )
