@@ -98,7 +98,9 @@ func _physics_process(delta):
 		elif !is_on_floor():
 			$Sprite.play("fall")
 		elif running: 
-			$Sprite.play("run")	
+			$Sprite.play("run")
+		elif shooting:
+			$Sprite.play("shoot")
 		else: $Sprite.play("idle")
 		
 		if $dash_cooldown.time_left > 0:
