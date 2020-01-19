@@ -39,6 +39,7 @@ func _physics_process(delta):
 			
 		$Sprite.play("walk")
 		
+		
 func take_damage(damage):
 	hp -= damage
 	if hp <= 0:
