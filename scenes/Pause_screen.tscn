@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=4 format=2]
 
 [ext_resource path="res://scripts/Pause_screen.gd" type="Script" id=1]
 [ext_resource path="res://assets/UI/new_dynamicfont.tres" type="DynamicFont" id=2]
+[ext_resource path="res://scenes/UI_Button.tscn" type="PackedScene" id=3]
 
 [node name="Pause_screen" type="Control"]
 pause_mode = 2
@@ -16,16 +17,48 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 color = Color( 0, 0, 0, 1 )
 
-[node name="Label" type="Label" parent="ColorRect"]
+[node name="Paused_label" type="Label" parent="ColorRect"]
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-margin_left = -20.0
-margin_top = -7.0
-margin_right = 20.0
-margin_bottom = 7.0
+margin_left = -21.0267
+margin_top = -86.5679
+margin_right = 18.9733
+margin_bottom = -72.5679
 custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.945098, 0.596078, 0.596078, 1 )
 text = "Paused"
 align = 1
 valign = 1
+
+[node name="Continue" parent="ColorRect" instance=ExtResource( 3 )]
+margin_left = 195.36
+margin_top = 95.1462
+margin_right = 287.36
+margin_bottom = 115.146
+text = "Continue"
+
+[node name="Restart_button" parent="ColorRect" instance=ExtResource( 3 )]
+margin_left = 193.306
+margin_top = 113.626
+margin_right = 285.306
+margin_bottom = 133.626
+
+[node name="Main_menu_button" parent="ColorRect" instance=ExtResource( 3 )]
+margin_left = 196.386
+margin_top = 133.133
+margin_right = 288.386
+margin_bottom = 153.133
+text = "Main menu"
+
+[node name="Quit_button" parent="ColorRect" instance=ExtResource( 3 )]
+margin_left = 194.333
+margin_top = 152.127
+margin_right = 286.333
+margin_bottom = 172.127
+text = "Quit"
+[connection signal="pressed" from="ColorRect/Continue" to="." method="_on_Continue_pressed"]
+[connection signal="pressed" from="ColorRect/Restart_button" to="." method="_on_Restart_button_pressed"]
+[connection signal="pressed" from="ColorRect/Main_menu_button" to="." method="_on_Main_menu_button_pressed"]
+[connection signal="pressed" from="ColorRect/Quit_button" to="." method="_on_Quit_button_pressed"]

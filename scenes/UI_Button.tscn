@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://assets/UI/new_dynamicfont.tres" type="DynamicFont" id=1]
+
+[node name="Button" type="Button"]
+margin_left = -18.4803
+margin_top = 36.9606
+margin_right = 73.5197
+margin_bottom = 56.9606
+custom_fonts/font = ExtResource( 1 )
+text = "Restart level"
+flat = true
