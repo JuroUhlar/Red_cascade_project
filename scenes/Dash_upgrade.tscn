@@ -1,0 +1,94 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://scripts/Dash_upgrade.gd" type="Script" id=1]
+[ext_resource path="res://assets/Upgrades/dash-pickup1.png" type="Texture" id=2]
+[ext_resource path="res://assets/Upgrades/dash-pickup2.png" type="Texture" id=3]
+[ext_resource path="res://assets/Upgrades/dash-pickup3.png" type="Texture" id=4]
+[ext_resource path="res://assets/Upgrades/dash-pickup4.png" type="Texture" id=5]
+[ext_resource path="res://assets/Upgrades/dash-pickup5.png" type="Texture" id=6]
+[ext_resource path="res://assets/Upgrades/dash-pickup6.png" type="Texture" id=7]
+[ext_resource path="res://assets/Upgrades/dash-pickup7.png" type="Texture" id=8]
+[ext_resource path="res://assets/Upgrades/dash-pickup8.png" type="Texture" id=9]
+[ext_resource path="res://assets/Upgrades/dash-pickup9.png" type="Texture" id=10]
+[ext_resource path="res://assets/Upgrades/dash-pickup10.png" type="Texture" id=11]
+[ext_resource path="res://assets/Upgrades/dash-pickup11.png" type="Texture" id=12]
+[ext_resource path="res://assets/Upgrades/dash-pickup12.png" type="Texture" id=13]
+[ext_resource path="res://assets/Upgrades/dash-pickup13.png" type="Texture" id=14]
+[ext_resource path="res://assets/Upgrades/dash-pickup14.png" type="Texture" id=15]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "dash_pickup",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 15 )
+
+[sub_resource type="Animation" id=3]
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Vector2( 0, 0 ), Vector2( 0, -20 ) ]
+}
+
+[node name="Dash_upgrade" type="Area2D"]
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "dash_pickup"
+frame = 7
+playing = true
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="Label" type="Label" parent="."]
+visible = false
+margin_left = -25.2099
+margin_top = -20.0769
+margin_right = 87.7901
+margin_bottom = 10.9231
+rect_scale = Vector2( 0.5, 0.5 )
+text = "Dash upgrade placeholder"
+align = 1
+autowrap = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/picked_up = SubResource( 3 )
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+visible = false
+position = Vector2( 1.43051e-006, 1.43051e-006 )
+scale = Vector2( 1.6, 1.6 )
+process_parent = true
+physics_process_parent = true
+[connection signal="body_entered" from="." to="." method="_on_Dash_upgrade_body_entered"]

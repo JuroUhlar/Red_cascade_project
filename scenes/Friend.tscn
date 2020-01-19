@@ -1,0 +1,66 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://scripts/Friend.gd" type="Script" id=1]
+[ext_resource path="res://assets/NPC/npc-idle1.png" type="Texture" id=2]
+[ext_resource path="res://assets/NPC/npc-idle2.png" type="Texture" id=3]
+[ext_resource path="res://assets/UI/button-hint-Y1.png" type="Texture" id=4]
+[ext_resource path="res://assets/UI/button-hint-Y2.png" type="Texture" id=5]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "idle",
+"speed": 2.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 15 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 39, 19 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
+"loop": true,
+"name": "interact",
+"speed": 1.0
+} ]
+
+[node name="Friend" type="StaticBody2D"]
+position = Vector2( 36, 27 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "idle"
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+disabled = true
+
+[node name="player_proximity_sensor" type="Area2D" parent="."]
+
+[node name="proximity_sensor_collision_shape" type="CollisionShape2D" parent="player_proximity_sensor"]
+shape = SubResource( 3 )
+
+[node name="Hint" type="AnimatedSprite" parent="."]
+visible = false
+frames = SubResource( 4 )
+animation = "interact"
+playing = true
+offset = Vector2( 0, -30 )
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+position = Vector2( -0.500004, 0.499999 )
+scale = Vector2( 4.05, 2.75 )
+process_parent = true
+physics_process_parent = true
+[connection signal="body_entered" from="player_proximity_sensor" to="." method="_on_player_proximity_sensor_body_entered"]
+[connection signal="body_exited" from="player_proximity_sensor" to="." method="_on_player_proximity_sensor_body_exited"]

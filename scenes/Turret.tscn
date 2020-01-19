@@ -1,0 +1,74 @@
+[gd_scene load_steps=20 format=2]
+
+[ext_resource path="res://Turret.gd" type="Script" id=1]
+[ext_resource path="res://scenes/turret_bullet.tscn" type="PackedScene" id=2]
+[ext_resource path="res://assets/Turret/turret_deploy0.png" type="Texture" id=3]
+[ext_resource path="res://assets/Turret/turret_destroy_1.png" type="Texture" id=4]
+[ext_resource path="res://assets/Turret/turret_destroy_2.png" type="Texture" id=5]
+[ext_resource path="res://assets/Turret/turret_destroy_3.png" type="Texture" id=6]
+[ext_resource path="res://assets/Turret/turret_destroy_4.png" type="Texture" id=7]
+[ext_resource path="res://assets/Turret/turret_destroy_5.png" type="Texture" id=8]
+[ext_resource path="res://assets/Turret/turret_destroy_6.png" type="Texture" id=9]
+[ext_resource path="res://assets/Turret/turret_destroy_7.png" type="Texture" id=10]
+[ext_resource path="res://assets/Turret/turret_deploy1.png" type="Texture" id=11]
+[ext_resource path="res://assets/Turret/turret_deploy2.png" type="Texture" id=12]
+[ext_resource path="res://assets/Turret/turret_deploy3.png" type="Texture" id=13]
+[ext_resource path="res://assets/Turret/turret_deploy4.png" type="Texture" id=14]
+[ext_resource path="res://assets/Turret/turret_deploy5.png" type="Texture" id=15]
+[ext_resource path="res://assets/Turret/turret_deploy6.png" type="Texture" id=16]
+[ext_resource path="res://assets/Turret/turret_deploy7.png" type="Texture" id=17]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ) ],
+"loop": false,
+"name": "die",
+"speed": 10.0
+}, {
+"frames": [ ExtResource( 3 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
+"loop": false,
+"name": "deploy",
+"speed": 10.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 10, 11.3483 )
+
+[node name="Turret" type="StaticBody2D"]
+collision_layer = 2
+script = ExtResource( 1 )
+bullet = ExtResource( 2 )
+
+[node name="Sprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.8, 0.8 )
+frames = SubResource( 1 )
+animation = "idle"
+playing = true
+
+[node name="RayCast_right" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 120, 0 )
+
+[node name="RayCast_left" type="RayCast2D" parent="."]
+enabled = true
+exclude_parent = false
+cast_to = Vector2( -120, 0 )
+
+[node name="muzzle_position" type="Position2D" parent="."]
+position = Vector2( 14.8867, -10.1081 )
+
+[node name="gun_timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 2 )
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+position = Vector2( 0.0650902, 1.52106 )
+scale = Vector2( 10.0439, 1.72789 )
+physics_process_parent = true
