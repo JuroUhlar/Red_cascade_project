@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=24 format=2]
 
 [ext_resource path="res://scripts/Turret.gd" type="Script" id=1]
 [ext_resource path="res://scenes/turret_bullet.tscn" type="PackedScene" id=2]
@@ -17,7 +17,9 @@
 [ext_resource path="res://assets/Turret/turret_deploy5.png" type="Texture" id=15]
 [ext_resource path="res://assets/Turret/turret_deploy6.png" type="Texture" id=16]
 [ext_resource path="res://assets/Turret/turret_deploy7.png" type="Texture" id=17]
-
+[ext_resource path="res://assets/Player/muzzle3.png" type="Texture" id=18]
+[ext_resource path="res://assets/Player/muzzle1.png" type="Texture" id=19]
+[ext_resource path="res://assets/Player/muzzle2.png" type="Texture" id=20]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -34,6 +36,19 @@ animations = [ {
 "frames": [ ExtResource( 3 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ) ],
 "loop": false,
 "name": "deploy",
+"speed": 10.0
+} ]
+
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ ExtResource( 18 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 19 ), ExtResource( 20 ), ExtResource( 18 ) ],
+"loop": false,
+"name": "shoot",
 "speed": 10.0
 } ]
 
@@ -63,6 +78,12 @@ cast_to = Vector2( -120, 0 )
 [node name="muzzle_position" type="Position2D" parent="."]
 position = Vector2( 14.8867, -10.1081 )
 
+[node name="muzzle_sprite" type="AnimatedSprite" parent="muzzle_position"]
+modulate = Color( 0.960784, 0.945098, 0.505882, 1 )
+position = Vector2( 1.81708, 3.84937 )
+z_index = 1
+frames = SubResource( 11 )
+
 [node name="gun_timer" type="Timer" parent="."]
 one_shot = true
 
@@ -73,3 +94,4 @@ shape = SubResource( 2 )
 position = Vector2( 0.0650902, 1.52106 )
 scale = Vector2( 10.0439, 1.72789 )
 physics_process_parent = true
+[connection signal="animation_finished" from="muzzle_position/muzzle_sprite" to="." method="_on_muzzle_sprite_animation_finished"]

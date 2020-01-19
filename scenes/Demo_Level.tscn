@@ -750,7 +750,7 @@ position = Vector2( 3138, 643 )
 position = Vector2( 3585, 435 )
 
 [node name="Player" parent="." instance=ExtResource( 21 )]
-position = Vector2( 2747.08, 1083.26 )
+position = Vector2( 3325.63, 895.158 )
 
 [node name="Dash_upgrade" parent="." instance=ExtResource( 22 )]
 position = Vector2( 3700, 434 )

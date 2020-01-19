@@ -5,7 +5,10 @@ export var sensor_range = 400
 export var hp = 50
 export (PackedScene) var bullet
 
+onready var muzzle_sprite = get_node("muzzle_position/muzzle_sprite")
+
 var dead = false
+var shooting = false
 
 func _ready():
 	add_to_group("turrets")
@@ -21,20 +24,26 @@ func _physics_process(delta):
 				$Sprite.flip_h = true
 				if sign($muzzle_position.position.x) == 1:
 					$muzzle_position.position.x *= -1
+					muzzle_sprite.flip_h = true
 					$gun_timer.start()
 			else:
 				$Sprite.flip_h = false
 				if sign($muzzle_position.position.x) == -1:
 					$muzzle_position.position.x *= -1
+					muzzle_sprite.flip_h = false
 					$gun_timer.start()
 					
 			if $gun_timer.time_left <= 0: 
 				shoot()
+				
+	if shooting: muzzle_sprite.play("shoot")
+	else: muzzle_sprite.play("default")
 			
-	if dead: $Sprite.play("die")	
+	if dead: $Sprite.play("die")
 	elif deployed: $Sprite.play("deploy")
 	
 func shoot():
+	shooting = true
 	$gun_timer.start()
 	var projectile = bullet.instance()
 	if sign($muzzle_position.position.x) == 1:
@@ -66,3 +75,7 @@ func die():
 	queue_free()
 	
 
+
+
+func _on_muzzle_sprite_animation_finished():
+	shooting = false
