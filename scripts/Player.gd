@@ -191,12 +191,13 @@ func _on_enemy_detector_body_entered(body):
 			die()
 		
 func die():
-	dying = true
-	$CollisionShape2D.disabled = true
-	$CollisionShape2D.scale = Vector2.ZERO
-	$Sprite.play("die")
-	yield($Sprite, "animation_finished")
-	$death_timer.start()
+	if(!dying):
+		dying = true
+		$CollisionShape2D.disabled = true
+		$CollisionShape2D.scale = Vector2.ZERO
+		$Sprite.play("die")
+		yield($Sprite, "animation_finished")
+		$death_timer.start()
 	
 func take_damage(damage):
 	hp -= damage
@@ -205,10 +206,11 @@ func take_damage(damage):
 
 func _on_death_timer_timeout():
 	hp = 30
-	dying = false
+	$death_timer.stop()
 	$CollisionShape2D.disabled = false
 	$CollisionShape2D.scale = Vector2.ONE
 	global_position = Global.latest_checkpoint_position
+	dying = false
 	
 func get_dash():
 	dash_enabled = true
