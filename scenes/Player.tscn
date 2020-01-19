@@ -2,7 +2,7 @@
 
 [ext_resource path="res://scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://scenes/player_bullet.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/Camera2D.gd" type="Script" id=3]
+[ext_resource path="res://scripts/Camera2D.gd" type="Script" id=3]
 [ext_resource path="res://assets/Player/player-trail.png" type="Texture" id=4]
 [ext_resource path="res://assets/Player/player-idle1.png" type="Texture" id=5]
 [ext_resource path="res://assets/Player/player-idle2.png" type="Texture" id=6]
