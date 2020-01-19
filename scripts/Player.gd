@@ -82,6 +82,7 @@ func _physics_process(delta):
 			
 		if shooting:
 			gun_muzzle_sprite.play("shoot")
+			$player_shoot.play() #player shooting sound
 		else:
 			gun_muzzle_sprite.play("default")
 			
