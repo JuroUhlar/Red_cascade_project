@@ -14,17 +14,19 @@ animations = [ {
 "speed": 10.0
 } ]
 
-[node name="CableHanging" type="AnimatedSprite"]
+[node name="Node2D" type="Node2D"]
+
+[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
+position = Vector2( 2172.08, 733.004 )
+scale = Vector2( 1.29198, 1.39956 )
+
+[node name="CableHanging" type="AnimatedSprite" parent="."]
 position = Vector2( 2175, 737 )
 z_index = 1
 frames = SubResource( 1 )
 animation = "cable_hang"
-frame = 7
+frame = 4
 playing = true
 __meta__ = {
 "_edit_group_": true
 }
-
-[node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
-position = Vector2( -2.9198, -3.99561 )
-scale = Vector2( 1.29198, 1.39956 )
