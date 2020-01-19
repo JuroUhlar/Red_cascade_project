@@ -1,39 +1,40 @@
-[gd_scene load_steps=90 format=2]
+[gd_scene load_steps=91 format=2]
 
 [ext_resource path="res://assets/Background/rc-level-demo-preview2.png" type="Texture" id=1]
 [ext_resource path="res://scenes/details/ForestFire.tscn" type="PackedScene" id=2]
-[ext_resource path="res://scenes/Death_pit.tscn" type="PackedScene" id=3]
-[ext_resource path="res://scenes/details/CableHanging.tscn" type="PackedScene" id=4]
-[ext_resource path="res://scenes/details/Sparks.tscn" type="PackedScene" id=5]
-[ext_resource path="res://scenes/details/DrippingGoo.tscn" type="PackedScene" id=6]
-[ext_resource path="res://scenes/details/FloorGoo_A.tscn" type="PackedScene" id=7]
-[ext_resource path="res://scenes/details/FloorGoo_B8.tscn" type="PackedScene" id=8]
-[ext_resource path="res://scenes/details/CornerGoo.tscn" type="PackedScene" id=9]
-[ext_resource path="res://scenes/details/BigPannel.tscn" type="PackedScene" id=10]
-[ext_resource path="res://scenes/Explosion_trigger.tscn" type="PackedScene" id=11]
-[ext_resource path="res://assets/Background/red-cascade-initial-room-after-explosion.png" type="Texture" id=12]
-[ext_resource path="res://scripts/RoomAfterExplosion.gd" type="Script" id=13]
-[ext_resource path="res://scenes/Door.tscn" type="PackedScene" id=14]
-[ext_resource path="res://scenes/Light_red.tscn" type="PackedScene" id=15]
-[ext_resource path="res://scenes/Enemy.tscn" type="PackedScene" id=16]
-[ext_resource path="res://scenes/Enemy_wall.tscn" type="PackedScene" id=17]
-[ext_resource path="res://scenes/Turret.tscn" type="PackedScene" id=18]
-[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=19]
-[ext_resource path="res://scenes/Dash_upgrade.tscn" type="PackedScene" id=20]
-[ext_resource path="res://scenes/Enemy_stopper.tscn" type="PackedScene" id=21]
-[ext_resource path="res://scenes/Friend.tscn" type="PackedScene" id=22]
-[ext_resource path="res://scenes/Button.tscn" type="PackedScene" id=23]
-[ext_resource path="res://scenes/Trigger.tscn" type="PackedScene" id=24]
-[ext_resource path="res://scenes/Checkpoint.tscn" type="PackedScene" id=25]
-[ext_resource path="res://scenes/Dialogue.tscn" type="PackedScene" id=26]
-[ext_resource path="res://assets/UI/npc_avatar.png" type="Texture" id=27]
-[ext_resource path="res://assets/UI/avatar.png" type="Texture" id=28]
-[ext_resource path="res://scenes/End_screen.tscn" type="PackedScene" id=29]
-[ext_resource path="res://assets/UI/Explosion.tscn" type="PackedScene" id=30]
-[ext_resource path="res://scenes/Pause_screen.tscn" type="PackedScene" id=31]
-[ext_resource path="res://scripts/Final_scenario.gd" type="Script" id=32]
-[ext_resource path="res://scenes/EnemyBoss.tscn" type="PackedScene" id=33]
-[ext_resource path="res://scenes/Enemy_spawn_point.tscn" type="PackedScene" id=34]
+[ext_resource path="res://scenes/Forest_goo.tscn" type="PackedScene" id=3]
+[ext_resource path="res://scenes/Death_pit.tscn" type="PackedScene" id=4]
+[ext_resource path="res://scenes/details/CableHanging.tscn" type="PackedScene" id=5]
+[ext_resource path="res://scenes/details/Sparks.tscn" type="PackedScene" id=6]
+[ext_resource path="res://scenes/details/DrippingGoo.tscn" type="PackedScene" id=7]
+[ext_resource path="res://scenes/details/FloorGoo_A.tscn" type="PackedScene" id=8]
+[ext_resource path="res://scenes/details/FloorGoo_B8.tscn" type="PackedScene" id=9]
+[ext_resource path="res://scenes/details/CornerGoo.tscn" type="PackedScene" id=10]
+[ext_resource path="res://scenes/details/BigPannel.tscn" type="PackedScene" id=11]
+[ext_resource path="res://scenes/Explosion_trigger.tscn" type="PackedScene" id=12]
+[ext_resource path="res://assets/Background/red-cascade-initial-room-after-explosion.png" type="Texture" id=13]
+[ext_resource path="res://scripts/RoomAfterExplosion.gd" type="Script" id=14]
+[ext_resource path="res://scenes/Door.tscn" type="PackedScene" id=15]
+[ext_resource path="res://scenes/Light_red.tscn" type="PackedScene" id=16]
+[ext_resource path="res://scenes/Enemy.tscn" type="PackedScene" id=17]
+[ext_resource path="res://scenes/Enemy_wall.tscn" type="PackedScene" id=18]
+[ext_resource path="res://scenes/Turret.tscn" type="PackedScene" id=19]
+[ext_resource path="res://scenes/Player.tscn" type="PackedScene" id=20]
+[ext_resource path="res://scenes/Dash_upgrade.tscn" type="PackedScene" id=21]
+[ext_resource path="res://scenes/Enemy_stopper.tscn" type="PackedScene" id=22]
+[ext_resource path="res://scenes/Friend.tscn" type="PackedScene" id=23]
+[ext_resource path="res://scenes/Button.tscn" type="PackedScene" id=24]
+[ext_resource path="res://scenes/Trigger.tscn" type="PackedScene" id=25]
+[ext_resource path="res://scenes/Checkpoint.tscn" type="PackedScene" id=26]
+[ext_resource path="res://scenes/Dialogue.tscn" type="PackedScene" id=27]
+[ext_resource path="res://assets/UI/npc_avatar.png" type="Texture" id=28]
+[ext_resource path="res://assets/UI/avatar.png" type="Texture" id=29]
+[ext_resource path="res://scenes/End_screen.tscn" type="PackedScene" id=30]
+[ext_resource path="res://assets/UI/Explosion.tscn" type="PackedScene" id=31]
+[ext_resource path="res://scenes/Pause_screen.tscn" type="PackedScene" id=32]
+[ext_resource path="res://scripts/Final_scenario.gd" type="Script" id=33]
+[ext_resource path="res://scenes/EnemyBoss.tscn" type="PackedScene" id=34]
+[ext_resource path="res://scenes/Enemy_spawn_point.tscn" type="PackedScene" id=35]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 76, 10 )
@@ -539,221 +540,225 @@ shape = SubResource( 55 )
 
 [node name="Forest_fire" parent="Level" instance=ExtResource( 2 )]
 position = Vector2( 1919.67, 611.846 )
+z_index = 1
 
-[node name="Death_pit" parent="Level" instance=ExtResource( 3 )]
+[node name="Forest_goo" parent="Level" instance=ExtResource( 3 )]
+position = Vector2( 1928.92, 617.161 )
+
+[node name="Death_pit" parent="Level" instance=ExtResource( 4 )]
 position = Vector2( 1409.08, 1478.04 )
 
 [node name="Level Details" type="Node" parent="Level"]
 editor/display_folded = true
 
-[node name="CableHanging" parent="Level/Level Details" instance=ExtResource( 4 )]
+[node name="CableHanging" parent="Level/Level Details" instance=ExtResource( 5 )]
 position = Vector2( 637, 1217 )
 
-[node name="CableHanging2" parent="Level/Level Details" instance=ExtResource( 4 )]
+[node name="CableHanging2" parent="Level/Level Details" instance=ExtResource( 5 )]
 position = Vector2( 1787, 1313 )
 
-[node name="CableHanging3" parent="Level/Level Details" instance=ExtResource( 4 )]
+[node name="CableHanging3" parent="Level/Level Details" instance=ExtResource( 5 )]
 position = Vector2( 2148, 1070 )
 
-[node name="CableHanging4" parent="Level/Level Details" instance=ExtResource( 4 )]
+[node name="CableHanging4" parent="Level/Level Details" instance=ExtResource( 5 )]
 position = Vector2( 2172, 737 )
 
-[node name="CableHanging5" parent="Level/Level Details" instance=ExtResource( 4 )]
+[node name="CableHanging5" parent="Level/Level Details" instance=ExtResource( 5 )]
 position = Vector2( 1789, 737 )
 
-[node name="CableHanging6" parent="Level/Level Details" instance=ExtResource( 4 )]
+[node name="CableHanging6" parent="Level/Level Details" instance=ExtResource( 5 )]
 position = Vector2( 2076, 430 )
 
-[node name="CableHanging7" parent="Level/Level Details" instance=ExtResource( 4 )]
+[node name="CableHanging7" parent="Level/Level Details" instance=ExtResource( 5 )]
 position = Vector2( 3363, 1057 )
 
-[node name="CableHanging8" parent="Level/Level Details" instance=ExtResource( 4 )]
+[node name="CableHanging8" parent="Level/Level Details" instance=ExtResource( 5 )]
 position = Vector2( 3534, 801 )
 
-[node name="Sparks" parent="Level/Level Details" instance=ExtResource( 5 )]
+[node name="Sparks" parent="Level/Level Details" instance=ExtResource( 6 )]
 position = Vector2( 2690.82, 1063.59 )
 
-[node name="Sparks8" parent="Level/Level Details" instance=ExtResource( 5 )]
+[node name="Sparks8" parent="Level/Level Details" instance=ExtResource( 6 )]
 position = Vector2( 2888.64, 1021.82 )
 
-[node name="Sparks9" parent="Level/Level Details" instance=ExtResource( 5 )]
+[node name="Sparks9" parent="Level/Level Details" instance=ExtResource( 6 )]
 position = Vector2( 2952.17, 968.327 )
 
-[node name="Sparks3" parent="Level/Level Details" instance=ExtResource( 5 )]
+[node name="Sparks3" parent="Level/Level Details" instance=ExtResource( 6 )]
 position = Vector2( 3621.31, 373.876 )
 
-[node name="Sparks4" parent="Level/Level Details" instance=ExtResource( 5 )]
+[node name="Sparks4" parent="Level/Level Details" instance=ExtResource( 6 )]
 position = Vector2( 2674.78, 290.182 )
 
-[node name="Sparks6" parent="Level/Level Details" instance=ExtResource( 5 )]
+[node name="Sparks6" parent="Level/Level Details" instance=ExtResource( 6 )]
 position = Vector2( 2114.75, 478.754 )
 
-[node name="Sparks7" parent="Level/Level Details" instance=ExtResource( 5 )]
+[node name="Sparks7" parent="Level/Level Details" instance=ExtResource( 6 )]
 position = Vector2( 1626.52, 751.961 )
 
-[node name="Sparks5" parent="Level/Level Details" instance=ExtResource( 5 )]
+[node name="Sparks5" parent="Level/Level Details" instance=ExtResource( 6 )]
 position = Vector2( 2484.01, 317.732 )
 
-[node name="Sparks2" parent="Level/Level Details" instance=ExtResource( 5 )]
+[node name="Sparks2" parent="Level/Level Details" instance=ExtResource( 6 )]
 position = Vector2( 771.883, 1222.81 )
 
-[node name="DrippingGoo" parent="Level/Level Details" instance=ExtResource( 6 )]
+[node name="DrippingGoo" parent="Level/Level Details" instance=ExtResource( 7 )]
 position = Vector2( 2281, 430 )
 
-[node name="DrippingGoo2" parent="Level/Level Details" instance=ExtResource( 6 )]
+[node name="DrippingGoo2" parent="Level/Level Details" instance=ExtResource( 7 )]
 position = Vector2( 2028, 430 )
 
-[node name="DrippingGoo3" parent="Level/Level Details" instance=ExtResource( 6 )]
+[node name="DrippingGoo3" parent="Level/Level Details" instance=ExtResource( 7 )]
 position = Vector2( 1501, 478 )
 
-[node name="DrippingGoo4" parent="Level/Level Details" instance=ExtResource( 6 )]
+[node name="DrippingGoo4" parent="Level/Level Details" instance=ExtResource( 7 )]
 position = Vector2( 1680, 737 )
 
-[node name="DrippingGoo5" parent="Level/Level Details" instance=ExtResource( 6 )]
+[node name="DrippingGoo5" parent="Level/Level Details" instance=ExtResource( 7 )]
 position = Vector2( 1524, 737 )
 
-[node name="DrippingGoo6" parent="Level/Level Details" instance=ExtResource( 6 )]
+[node name="DrippingGoo6" parent="Level/Level Details" instance=ExtResource( 7 )]
 position = Vector2( 2124, 737 )
 
-[node name="DrippingGoo7" parent="Level/Level Details" instance=ExtResource( 6 )]
+[node name="DrippingGoo7" parent="Level/Level Details" instance=ExtResource( 7 )]
 position = Vector2( 2366, 737 )
 
-[node name="DrippingGoo8" parent="Level/Level Details" instance=ExtResource( 6 )]
+[node name="DrippingGoo8" parent="Level/Level Details" instance=ExtResource( 7 )]
 position = Vector2( 2455, 737 )
 
-[node name="FloorGoo_A" parent="Level/Level Details" instance=ExtResource( 7 )]
+[node name="FloorGoo_A" parent="Level/Level Details" instance=ExtResource( 8 )]
 position = Vector2( 1593, 510 )
 
-[node name="FloorGoo_A2" parent="Level/Level Details" instance=ExtResource( 7 )]
+[node name="FloorGoo_A2" parent="Level/Level Details" instance=ExtResource( 8 )]
 position = Vector2( 2058, 399 )
 
-[node name="FloorGoo_A3" parent="Level/Level Details" instance=ExtResource( 7 )]
+[node name="FloorGoo_A3" parent="Level/Level Details" instance=ExtResource( 8 )]
 position = Vector2( 2271, 511 )
 
-[node name="FloorGoo_A4" parent="Level/Level Details" instance=ExtResource( 7 )]
+[node name="FloorGoo_A4" parent="Level/Level Details" instance=ExtResource( 8 )]
 position = Vector2( 2666, 399 )
 
-[node name="FloorGoo_B8" parent="Level/Level Details" instance=ExtResource( 8 )]
+[node name="FloorGoo_B8" parent="Level/Level Details" instance=ExtResource( 9 )]
 
-[node name="FloorGoo_B9" parent="Level/Level Details" instance=ExtResource( 8 )]
+[node name="FloorGoo_B9" parent="Level/Level Details" instance=ExtResource( 9 )]
 position = Vector2( 2489, 400 )
 
-[node name="FloorGoo_B10" parent="Level/Level Details" instance=ExtResource( 8 )]
+[node name="FloorGoo_B10" parent="Level/Level Details" instance=ExtResource( 9 )]
 position = Vector2( 2224, 400 )
 
-[node name="FloorGoo_B11" parent="Level/Level Details" instance=ExtResource( 8 )]
+[node name="FloorGoo_B11" parent="Level/Level Details" instance=ExtResource( 9 )]
 position = Vector2( 1954, 512 )
 
-[node name="FloorGoo_B12" parent="Level/Level Details" instance=ExtResource( 8 )]
+[node name="FloorGoo_B12" parent="Level/Level Details" instance=ExtResource( 9 )]
 position = Vector2( 1495, 448 )
 
-[node name="CornerGoo" parent="Level/Level Details" instance=ExtResource( 9 )]
+[node name="CornerGoo" parent="Level/Level Details" instance=ExtResource( 10 )]
 
-[node name="BigPannel" parent="Level/Level Details" instance=ExtResource( 10 )]
+[node name="BigPannel" parent="Level/Level Details" instance=ExtResource( 11 )]
 position = Vector2( 2912.4, 976.229 )
 
-[node name="Explosion_trigger" parent="Level" instance=ExtResource( 11 )]
+[node name="Explosion_trigger" parent="Level" instance=ExtResource( 12 )]
 trigger_target_Paths = [ NodePath("../../CanvasLayer/Explosion"), NodePath("RoomAfterExplosion"), NodePath("Door_exploded"), NodePath("../Lights/Light_red"), NodePath("../Lights/Light_red2"), NodePath("../Lights/Light_red3") ]
 player_path = NodePath("../../Player")
 
 [node name="RoomAfterExplosion" type="Sprite" parent="Level/Explosion_trigger"]
 visible = false
 position = Vector2( 241, 1176 )
-texture = ExtResource( 12 )
-script = ExtResource( 13 )
+texture = ExtResource( 13 )
+script = ExtResource( 14 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Door_exploded" parent="Level/Explosion_trigger" instance=ExtResource( 14 )]
+[node name="Door_exploded" parent="Level/Explosion_trigger" instance=ExtResource( 15 )]
 position = Vector2( 464.911, 1234.3 )
 
 [node name="Lights" type="Node" parent="Level"]
 
-[node name="Light_red" parent="Level/Lights" instance=ExtResource( 15 )]
+[node name="Light_red" parent="Level/Lights" instance=ExtResource( 16 )]
 position = Vector2( 221.293, 1199.54 )
 off = true
 
-[node name="Light_red2" parent="Level/Lights" instance=ExtResource( 15 )]
+[node name="Light_red2" parent="Level/Lights" instance=ExtResource( 16 )]
 position = Vector2( 436.941, 1190.04 )
 off = true
 
-[node name="Light_red3" parent="Level/Lights" instance=ExtResource( 15 )]
+[node name="Light_red3" parent="Level/Lights" instance=ExtResource( 16 )]
 position = Vector2( 661.007, 1208.47 )
 off = true
 
-[node name="Light_red4" parent="Level/Lights" instance=ExtResource( 15 )]
+[node name="Light_red4" parent="Level/Lights" instance=ExtResource( 16 )]
 position = Vector2( 896.543, 1208.84 )
 
-[node name="Light_red5" parent="Level/Lights" instance=ExtResource( 15 )]
+[node name="Light_red5" parent="Level/Lights" instance=ExtResource( 16 )]
 position = Vector2( 1178.09, 1207.33 )
 
 [node name="Enemies" type="Node" parent="."]
 editor/display_folded = true
 
-[node name="Enemy" parent="Enemies" instance=ExtResource( 16 )]
+[node name="Enemy" parent="Enemies" instance=ExtResource( 17 )]
 position = Vector2( 2856, 511 )
 
-[node name="Enemy2" parent="Enemies" instance=ExtResource( 16 )]
+[node name="Enemy2" parent="Enemies" instance=ExtResource( 17 )]
 position = Vector2( 2447, 383 )
 
-[node name="Enemy3" parent="Enemies" instance=ExtResource( 16 )]
+[node name="Enemy3" parent="Enemies" instance=ExtResource( 17 )]
 position = Vector2( 2159, 495 )
 active = true
 
-[node name="Enemy9" parent="Enemies" instance=ExtResource( 16 )]
+[node name="Enemy9" parent="Enemies" instance=ExtResource( 17 )]
 position = Vector2( 2310.48, 493.204 )
 active = true
 
-[node name="Enemy4" parent="Enemies" instance=ExtResource( 16 )]
+[node name="Enemy4" parent="Enemies" instance=ExtResource( 17 )]
 position = Vector2( 2026, 495 )
 active = true
 
-[node name="Enemy5" parent="Enemies" instance=ExtResource( 16 )]
+[node name="Enemy5" parent="Enemies" instance=ExtResource( 17 )]
 position = Vector2( 1890, 495 )
 active = true
 
-[node name="Enemy6" parent="Enemies" instance=ExtResource( 16 )]
+[node name="Enemy6" parent="Enemies" instance=ExtResource( 17 )]
 position = Vector2( 1559, 431 )
 
-[node name="Enemy10" parent="Enemies" instance=ExtResource( 16 )]
+[node name="Enemy10" parent="Enemies" instance=ExtResource( 17 )]
 position = Vector2( 1529, 431 )
 
-[node name="Enemy7" parent="Enemies" instance=ExtResource( 16 )]
+[node name="Enemy7" parent="Enemies" instance=ExtResource( 17 )]
 position = Vector2( 1466.43, 763.508 )
 
-[node name="Enemy8" parent="Enemies" instance=ExtResource( 16 )]
+[node name="Enemy8" parent="Enemies" instance=ExtResource( 17 )]
 position = Vector2( 2318, 767 )
 
-[node name="Enemy_wall" parent="Enemies" instance=ExtResource( 17 )]
+[node name="Enemy_wall" parent="Enemies" instance=ExtResource( 18 )]
 position = Vector2( 2772, 508 )
 
 [node name="Turrets" type="Node" parent="."]
 editor/display_folded = true
 
-[node name="Turret" parent="Turrets" instance=ExtResource( 18 )]
+[node name="Turret" parent="Turrets" instance=ExtResource( 19 )]
 position = Vector2( 3509, 899 )
 
-[node name="Turret3" parent="Turrets" instance=ExtResource( 18 )]
+[node name="Turret3" parent="Turrets" instance=ExtResource( 19 )]
 position = Vector2( 3138, 643 )
 
-[node name="Turret4" parent="Turrets" instance=ExtResource( 18 )]
+[node name="Turret4" parent="Turrets" instance=ExtResource( 19 )]
 position = Vector2( 3585, 435 )
 
-[node name="Player" parent="." instance=ExtResource( 19 )]
-position = Vector2( 310.729, 1244.62 )
+[node name="Player" parent="." instance=ExtResource( 20 )]
+position = Vector2( 1818.91, 765.274 )
 
-[node name="Dash_upgrade" parent="." instance=ExtResource( 20 )]
+[node name="Dash_upgrade" parent="." instance=ExtResource( 21 )]
 position = Vector2( 3700, 434 )
 dialog_path = NodePath("../CanvasLayer/Dash_info")
 
-[node name="Enemy_stopper" parent="." instance=ExtResource( 21 )]
+[node name="Enemy_stopper" parent="." instance=ExtResource( 22 )]
 position = Vector2( 1435, 503 )
 
-[node name="Enemy_stopper2" parent="." instance=ExtResource( 21 )]
+[node name="Enemy_stopper2" parent="." instance=ExtResource( 22 )]
 position = Vector2( 2406, 775 )
 
-[node name="Friend" parent="." instance=ExtResource( 22 )]
+[node name="Friend" parent="." instance=ExtResource( 23 )]
 position = Vector2( 2968, 1090 )
 collision_layer = 4
 primary_dialogue_path = NodePath("../CanvasLayer/Dialogue_friend_primary")
@@ -761,30 +766,30 @@ secondary_dialogue_path = NodePath("../CanvasLayer/Dialogue_friend_secondary")
 
 [node name="Objects" type="Node" parent="."]
 
-[node name="Door_final" parent="Objects" instance=ExtResource( 14 )]
+[node name="Door_final" parent="Objects" instance=ExtResource( 15 )]
 position = Vector2( 3187, 1073 )
 
-[node name="Door1" parent="Objects" instance=ExtResource( 14 )]
+[node name="Door1" parent="Objects" instance=ExtResource( 15 )]
 position = Vector2( 2305, 1073 )
 
-[node name="DoorButton1" parent="Objects/Door1" instance=ExtResource( 23 )]
+[node name="DoorButton1" parent="Objects/Door1" instance=ExtResource( 24 )]
 position = Vector2( -191.97, -50.34 )
 targetPath = NodePath("..")
 
-[node name="Trigger_close_door1" parent="Objects/Door1" instance=ExtResource( 24 )]
+[node name="Trigger_close_door1" parent="Objects/Door1" instance=ExtResource( 25 )]
 position = Vector2( 144.04, 9.81995 )
 targetPath = NodePath("..")
 deactivate = true
 
-[node name="Door_back_to_friend" parent="Objects" instance=ExtResource( 14 )]
+[node name="Door_back_to_friend" parent="Objects" instance=ExtResource( 15 )]
 position = Vector2( 2017.61, 752.886 )
 
-[node name="Button_fire_suppresion" parent="Objects/Door_back_to_friend" instance=ExtResource( 23 )]
+[node name="Button_fire_suppresion" parent="Objects/Door_back_to_friend" instance=ExtResource( 24 )]
 position = Vector2( -89.02, 15.16 )
 toggle = false
 targetPath = NodePath("../../../CanvasLayer/Dialogue_water_button")
 
-[node name="Trigger_close_door2" parent="Objects/Door_back_to_friend" instance=ExtResource( 24 )]
+[node name="Trigger_close_door2" parent="Objects/Door_back_to_friend" instance=ExtResource( 25 )]
 position = Vector2( 269.07, 15.596 )
 targetPath = NodePath("..")
 deactivate = true
@@ -792,128 +797,128 @@ deactivate = true
 [node name="Checkpoints" type="Node" parent="."]
 editor/display_folded = true
 
-[node name="Checkpoint" parent="Checkpoints" instance=ExtResource( 25 )]
+[node name="Checkpoint" parent="Checkpoints" instance=ExtResource( 26 )]
 position = Vector2( 2216.45, 1083.45 )
 
-[node name="Checkpoint2" parent="Checkpoints" instance=ExtResource( 25 )]
+[node name="Checkpoint2" parent="Checkpoints" instance=ExtResource( 26 )]
 position = Vector2( 3191.66, 953.254 )
 
-[node name="Checkpoint3" parent="Checkpoints" instance=ExtResource( 25 )]
+[node name="Checkpoint3" parent="Checkpoints" instance=ExtResource( 26 )]
 position = Vector2( 3501.65, 683.605 )
 
-[node name="Checkpoint4" parent="Checkpoints" instance=ExtResource( 25 )]
+[node name="Checkpoint4" parent="Checkpoints" instance=ExtResource( 26 )]
 position = Vector2( 3687.29, 428.15 )
 
-[node name="Checkpoint5" parent="Checkpoints" instance=ExtResource( 25 )]
+[node name="Checkpoint5" parent="Checkpoints" instance=ExtResource( 26 )]
 position = Vector2( 2989.16, 507.484 )
 
-[node name="Checkpoint6" parent="Checkpoints" instance=ExtResource( 25 )]
+[node name="Checkpoint6" parent="Checkpoints" instance=ExtResource( 26 )]
 position = Vector2( 2432.23, 378.963 )
 
-[node name="Checkpoint7" parent="Checkpoints" instance=ExtResource( 25 )]
+[node name="Checkpoint7" parent="Checkpoints" instance=ExtResource( 26 )]
 position = Vector2( 1781.7, 428.15 )
 
-[node name="Checkpoint8" parent="Checkpoints" instance=ExtResource( 25 )]
+[node name="Checkpoint8" parent="Checkpoints" instance=ExtResource( 26 )]
 position = Vector2( 2156.8, 759.881 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 pause_mode = 2
 
-[node name="Dialogue_friend_primary" parent="CanvasLayer" instance=ExtResource( 26 )]
+[node name="Dialogue_friend_primary" parent="CanvasLayer" instance=ExtResource( 27 )]
 visible = false
 texts = [ "Good to see you buddy! We are fucked!", "[Name]! Are you alright? Your leg...", "Yeah... I am not going anywhere... But you have to. There is fire in the vegetation module.", "I will go activate fire suppression manually.", "Yeah, do that. Lots of things around here run on oxygen. We might already be dead and not even know it.", "I will go fast. Stay on the radio." ]
-avatarTextures = [ ExtResource( 27 ), ExtResource( 28 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 27 ), ExtResource( 28 ) ]
+avatarTextures = [ ExtResource( 28 ), ExtResource( 29 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 28 ), ExtResource( 29 ) ]
 
-[node name="Dialogue_friend_secondary" parent="CanvasLayer" instance=ExtResource( 26 )]
+[node name="Dialogue_friend_secondary" parent="CanvasLayer" instance=ExtResource( 27 )]
 visible = false
 texts = [ "Hurry! Stop the fire!" ]
-avatarTextures = [ ExtResource( 27 ) ]
+avatarTextures = [ ExtResource( 28 ) ]
 
-[node name="Dash_info" parent="CanvasLayer" instance=ExtResource( 26 )]
+[node name="Dash_info" parent="CanvasLayer" instance=ExtResource( 27 )]
 visible = false
 texts = [ "Nice! Press [X] to dash. Combine with arrows to dash up or diagonally." ]
-avatarTextures = [ ExtResource( 27 ) ]
+avatarTextures = [ ExtResource( 28 ) ]
 
-[node name="Dialogue_water_button" parent="CanvasLayer" instance=ExtResource( 26 )]
+[node name="Dialogue_water_button" parent="CanvasLayer" instance=ExtResource( 27 )]
 visible = false
 texts = [ "Activating fire suppresson now.", "Do it!" ]
-avatarTextures = [ ExtResource( 28 ), ExtResource( 27 ) ]
+avatarTextures = [ ExtResource( 29 ), ExtResource( 28 ) ]
 end_trigger_target_Paths = [ NodePath("../Dialogue_after_button_pressed"), NodePath("../../Level/Forest_fire") ]
 
-[node name="Dialogue_after_button_pressed" parent="CanvasLayer" instance=ExtResource( 26 )]
+[node name="Dialogue_after_button_pressed" parent="CanvasLayer" instance=ExtResource( 27 )]
 visible = false
 margin_left = 100.918
 margin_top = 80.4171
 margin_right = -99.0822
 margin_bottom = -29.5829
 texts = [ "It worked!", "*have breathing* *sigh*" ]
-avatarTextures = [ ExtResource( 28 ), ExtResource( 27 ) ]
-end_trigger_target_Paths = [ NodePath("../../Objects/Door_back_to_friend"), NodePath("../../Final_scenario_stuff") ]
+avatarTextures = [ ExtResource( 29 ), ExtResource( 28 ) ]
+end_trigger_target_Paths = [ NodePath("../../Objects/Door_back_to_friend"), NodePath("../../Final_scenario_stuff"), NodePath("../../Level/Forest_goo") ]
 start_delay = 2
 
-[node name="End_screen" parent="CanvasLayer" instance=ExtResource( 29 )]
+[node name="End_screen" parent="CanvasLayer" instance=ExtResource( 30 )]
 
-[node name="Explosion" parent="CanvasLayer" instance=ExtResource( 30 )]
+[node name="Explosion" parent="CanvasLayer" instance=ExtResource( 31 )]
 
-[node name="Pause_screen" parent="CanvasLayer" instance=ExtResource( 31 )]
+[node name="Pause_screen" parent="CanvasLayer" instance=ExtResource( 32 )]
 
 [node name="Final_scenario_stuff" type="Node2D" parent="."]
 position = Vector2( 2711.43, 1336.58 )
-script = ExtResource( 32 )
+script = ExtResource( 33 )
 enemy_boss_path = NodePath("EnemyBoss")
 friendPath = NodePath("../Friend")
 wall_enemies = [ NodePath("Enemy_wall"), NodePath("Enemy_wall2"), NodePath("Enemy_wall3") ]
 
-[node name="Final_button" parent="Final_scenario_stuff" instance=ExtResource( 23 )]
+[node name="Final_button" parent="Final_scenario_stuff" instance=ExtResource( 24 )]
 position = Vector2( 458.373, -34.1478 )
 targetPath = NodePath("..")
 
-[node name="Enemy_wall" parent="Final_scenario_stuff" instance=ExtResource( 17 )]
+[node name="Enemy_wall" parent="Final_scenario_stuff" instance=ExtResource( 18 )]
 position = Vector2( -368.37, -253.827 )
 active = false
 
-[node name="Enemy_wall2" parent="Final_scenario_stuff" instance=ExtResource( 17 )]
+[node name="Enemy_wall2" parent="Final_scenario_stuff" instance=ExtResource( 18 )]
 position = Vector2( 436.518, -332.916 )
 active = false
 wall_on_right = true
 
-[node name="Enemy_wall3" parent="Final_scenario_stuff" instance=ExtResource( 17 )]
+[node name="Enemy_wall3" parent="Final_scenario_stuff" instance=ExtResource( 18 )]
 position = Vector2( 548.645, -380.819 )
 active = false
 wall_on_right = true
 
-[node name="EnemyBoss" parent="Final_scenario_stuff" instance=ExtResource( 33 )]
+[node name="EnemyBoss" parent="Final_scenario_stuff" instance=ExtResource( 34 )]
 hp = 40
 death_trigger_target_Paths = [ NodePath("../../Objects/Door_final"), NodePath("../Enemy_spawn_point"), NodePath("../upper_spawn_point_trigger") ]
 
-[node name="Enemy_spawn_point" parent="Final_scenario_stuff" instance=ExtResource( 34 )]
+[node name="Enemy_spawn_point" parent="Final_scenario_stuff" instance=ExtResource( 35 )]
 position = Vector2( -373.86, -253.018 )
 
-[node name="Enemy_spawn_point2" parent="Final_scenario_stuff" instance=ExtResource( 34 )]
+[node name="Enemy_spawn_point2" parent="Final_scenario_stuff" instance=ExtResource( 35 )]
 position = Vector2( 558.397, -382.911 )
 max_enemies = 4
 
-[node name="upper_spawn_point_trigger" parent="Final_scenario_stuff" instance=ExtResource( 24 )]
+[node name="upper_spawn_point_trigger" parent="Final_scenario_stuff" instance=ExtResource( 25 )]
 position = Vector2( 316.151, -246.35 )
 targetPath = NodePath("../Enemy_spawn_point2")
 triggerable = false
 
-[node name="Door_final_safe" parent="Final_scenario_stuff" instance=ExtResource( 14 )]
+[node name="Door_final_safe" parent="Final_scenario_stuff" instance=ExtResource( 15 )]
 position = Vector2( 770.57, -263.58 )
 open = true
 
-[node name="Trigger" parent="Final_scenario_stuff/Door_final_safe" instance=ExtResource( 24 )]
+[node name="Trigger" parent="Final_scenario_stuff/Door_final_safe" instance=ExtResource( 25 )]
 position = Vector2( 29.708, 13.7179 )
 targetPath = NodePath("..")
 deactivate = true
 
-[node name="Trigger2" parent="Final_scenario_stuff/Door_final_safe" instance=ExtResource( 24 )]
+[node name="Trigger2" parent="Final_scenario_stuff/Door_final_safe" instance=ExtResource( 25 )]
 position = Vector2( -63.8691, 15.1146 )
 targetPath = NodePath("..")
 
-[node name="Door_end" parent="Final_scenario_stuff" instance=ExtResource( 14 )]
+[node name="Door_end" parent="Final_scenario_stuff" instance=ExtResource( 15 )]
 position = Vector2( 1467.57, -263.58 )
 
-[node name="Trigger_fade_to_black" parent="Final_scenario_stuff" instance=ExtResource( 24 )]
+[node name="Trigger_fade_to_black" parent="Final_scenario_stuff" instance=ExtResource( 25 )]
 position = Vector2( 1397.4, -249.043 )
 targetPath = NodePath("../../CanvasLayer/End_screen")
