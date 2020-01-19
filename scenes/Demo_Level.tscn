@@ -207,7 +207,6 @@ __meta__ = {
 }
 
 [node name="Level" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="LevelSprite" type="Sprite" parent="Level"]
 position = Vector2( 1, 1 )
@@ -545,6 +544,7 @@ position = Vector2( 1919.67, 611.846 )
 position = Vector2( 1409.08, 1478.04 )
 
 [node name="Level Details" type="Node" parent="Level"]
+editor/display_folded = true
 
 [node name="CableHanging" parent="Level/Level Details" instance=ExtResource( 4 )]
 position = Vector2( 637, 1217 )
@@ -654,6 +654,7 @@ position = Vector2( 2912.4, 976.229 )
 
 [node name="Explosion_trigger" parent="Level" instance=ExtResource( 11 )]
 trigger_target_Paths = [ NodePath("../../CanvasLayer/Explosion"), NodePath("RoomAfterExplosion"), NodePath("Door_exploded"), NodePath("../Lights/Light_red"), NodePath("../Lights/Light_red2"), NodePath("../Lights/Light_red3") ]
+player_path = NodePath("../../Player")
 
 [node name="RoomAfterExplosion" type="Sprite" parent="Level/Explosion_trigger"]
 visible = false
@@ -728,6 +729,7 @@ position = Vector2( 2318, 767 )
 position = Vector2( 2772, 508 )
 
 [node name="Turrets" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="Turret" parent="Turrets" instance=ExtResource( 18 )]
 position = Vector2( 3509, 899 )
@@ -739,7 +741,7 @@ position = Vector2( 3138, 643 )
 position = Vector2( 3585, 435 )
 
 [node name="Player" parent="." instance=ExtResource( 19 )]
-position = Vector2( 1850.69, 762.738 )
+position = Vector2( 310.729, 1244.62 )
 
 [node name="Dash_upgrade" parent="." instance=ExtResource( 20 )]
 position = Vector2( 3700, 434 )
@@ -758,7 +760,6 @@ primary_dialogue_path = NodePath("../CanvasLayer/Dialogue_friend_primary")
 secondary_dialogue_path = NodePath("../CanvasLayer/Dialogue_friend_secondary")
 
 [node name="Objects" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="Door_final" parent="Objects" instance=ExtResource( 14 )]
 position = Vector2( 3187, 1073 )
@@ -789,6 +790,7 @@ targetPath = NodePath("..")
 deactivate = true
 
 [node name="Checkpoints" type="Node" parent="."]
+editor/display_folded = true
 
 [node name="Checkpoint" parent="Checkpoints" instance=ExtResource( 25 )]
 position = Vector2( 2216.45, 1083.45 )

@@ -216,9 +216,15 @@ func get_dash():
 	dash_enabled = true
 	
 func camera_shake_shoot():
-	var duration = 0.1
+	var duration = 0.15
 	var frequency = 10
-	var amplitude = 4 
+	var amplitude = 5 
+	$Camera2D.shake(duration,frequency,amplitude)
+	
+func camera_shake_explosion():
+	var duration = 2
+	var frequency = 26
+	var amplitude = 12
 	$Camera2D.shake(duration,frequency,amplitude)
 
 
