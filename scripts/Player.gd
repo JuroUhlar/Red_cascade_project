@@ -4,6 +4,7 @@ export var speed: = Vector2(200.0, 500.0)
 
 onready var grounded_tolerance_timer = get_node("grounded_tolerance_timer")
 onready var jump_trigger_tolerance_timer = get_node("jump_trigger_tolerance_timer")
+onready var gun_muzzle_sprite = get_node("gun_muzzle/muzzle_sprite")
 
 export var dash_speed_multiplier = 3.0
 export var dash_jump_multiplier = 1.0
@@ -45,11 +46,15 @@ func _physics_process(delta):
 			running = true
 			if sign($gun_muzzle.position.x) == 1:
 				$gun_muzzle.position.x *= -1
+				gun_muzzle_sprite.flip_h = true
+				gun_muzzle_sprite.offset.x = -3
 		elif Input.is_action_pressed("move_right"):
 			$Sprite.flip_h = false
 			running = true
 			if sign($gun_muzzle.position.x) == -1:
 				$gun_muzzle.position.x *= -1
+				gun_muzzle_sprite.flip_h = false
+				gun_muzzle_sprite.offset.x = 0
 		else:
 			running = false	
 	
@@ -74,11 +79,17 @@ func _physics_process(delta):
 			get_parent().add_child(projectile)
 			projectile.position = $gun_muzzle.global_position
 			
-		
-		# Sprite management based on state
 		if shooting:
-			$Sprite.play("shoot")
-		elif dashing && Input.is_action_pressed("move_up"):
+			gun_muzzle_sprite.play("shoot")
+		else:
+			gun_muzzle_sprite.play("default")
+			
+		
+#		# Sprite management based on state
+#		if shooting:
+##			$Sprite.play("shoot")
+		
+		if dashing && Input.is_action_pressed("move_up"):
 			$Sprite.play("jump")
 		elif dashing:
 			$Sprite.play("dash")	
@@ -164,7 +175,10 @@ func _on_ghost_timer_timeout():
 		this_ghost.flip_h = $Sprite.flip_h
 
 
-func _on_Sprite_animation_finished():
+#func _on_Sprite_animation_finished():
+#	shooting = false
+	
+func _on_muzzle_sprite_animation_finished():
 	shooting = false
 
 func _on_gun_timer_timeout():
@@ -194,3 +208,6 @@ func _on_death_timer_timeout():
 	
 func get_dash():
 	dash_enabled = true
+
+
+

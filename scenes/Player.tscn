@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=2]
+[gd_scene load_steps=43 format=2]
 
 [ext_resource path="res://scripts/Player.gd" type="Script" id=1]
 [ext_resource path="res://scenes/player_bullet.tscn" type="PackedScene" id=2]
@@ -28,6 +28,9 @@
 [ext_resource path="res://assets/Player/player-dash1.png" type="Texture" id=26]
 [ext_resource path="res://assets/Player/player-dash2.png" type="Texture" id=27]
 [ext_resource path="res://assets/Player/player-dash3.png" type="Texture" id=28]
+[ext_resource path="res://assets/Player/muzzle3.png" type="Texture" id=29]
+[ext_resource path="res://assets/Player/muzzle1.png" type="Texture" id=30]
+[ext_resource path="res://assets/Player/muzzle2.png" type="Texture" id=31]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 10.8078, 15 )
@@ -99,13 +102,23 @@ animations = [ {
 [sub_resource type="OccluderPolygon2D" id=10]
 polygon = PoolVector2Array( 7.90382, -1.07347, 9.03745, -4.5688, 2.6136, -5.32455, -0.409378, -13.7322, -8.43918, -11.9373, -13.446, -2.86838, -13.446, 5.53931, -13.446, 16.4976, -5.22726, 15.8363, 7.05362, 15.6474, 6.10893, 3.93335 )
 
+[sub_resource type="SpriteFrames" id=11]
+animations = [ {
+"frames": [ ExtResource( 29 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 30 ), ExtResource( 31 ), ExtResource( 29 ) ],
+"loop": false,
+"name": "shoot",
+"speed": 20.0
+} ]
+
 [node name="Player" type="KinematicBody2D"]
-position = Vector2( 576.252, 437.25 )
+position = Vector2( 575.148, 436.146 )
 collision_mask = 12
 script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
 speed = Vector2( 200, 550 )
 dash_cooldown_modulation_color = Color( 1, 0.333333, 0.333333, 1 )
 player_bullet = ExtResource( 2 )
@@ -181,9 +194,16 @@ occluder = SubResource( 10 )
 
 [node name="gun_muzzle" type="Position2D" parent="."]
 position = Vector2( 12, -3 )
+
+[node name="muzzle_sprite" type="AnimatedSprite" parent="gun_muzzle"]
+position = Vector2( 1.81708, 3.84937 )
+z_index = 1
+frames = SubResource( 11 )
+animation = "shoot"
 [connection signal="body_entered" from="enemy_detector" to="." method="_on_enemy_detector_body_entered"]
 [connection signal="timeout" from="dash_timer" to="." method="_on_dash_timer_timeout"]
 [connection signal="timeout" from="gun_timer" to="." method="_on_gun_timer_timeout"]
 [connection signal="timeout" from="death_timer" to="." method="_on_death_timer_timeout"]
 [connection signal="timeout" from="ghost_timer" to="." method="_on_ghost_timer_timeout"]
 [connection signal="animation_finished" from="Sprite" to="." method="_on_Sprite_animation_finished"]
+[connection signal="animation_finished" from="gun_muzzle/muzzle_sprite" to="." method="_on_muzzle_sprite_animation_finished"]
