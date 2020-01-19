@@ -177,9 +177,6 @@ func _on_ghost_timer_timeout():
 		this_ghost.texture = $Sprite.frames.get_frame($Sprite.animation, $Sprite.frame)
 		this_ghost.flip_h = $Sprite.flip_h
 
-
-#func _on_Sprite_animation_finished():
-#	shooting = false
 	
 func _on_muzzle_sprite_animation_finished():
 	shooting = false
@@ -207,7 +204,11 @@ func take_damage(damage):
 		die()
 
 func _on_death_timer_timeout():
-	get_tree().reload_current_scene()
+	hp = 30
+	dying = false
+	$CollisionShape2D.disabled = false
+	$CollisionShape2D.scale = Vector2.ONE
+	global_position = Global.latest_checkpoint_position
 	
 func get_dash():
 	dash_enabled = true
