@@ -11,13 +11,14 @@ var dying = false
 func _ready():
 	_velocity.x = speed.x
 	set_physics_process(false)
-	add_to_group("enemies")
+#	add_to_group("enemies")
 	add_to_group("damageable")
 	if(!active):
 		$Sprite.play("dormant")
 		$CollisionShape2D.scale = Vector2.ZERO
 	else:
 		$Sprite.play("spawn")
+		add_to_group("enemies")
 		$CollisionShape2D.scale = Vector2.ONE
 		$nav_timer.start()
 
@@ -56,6 +57,7 @@ func die():
 func activate():
 	$Sprite.play("spawn")
 	yield($Sprite, "animation_finished")
+	add_to_group("enemies")
 	if ($AnimationPlayer): $AnimationPlayer.play("spawn")
 	$CollisionShape2D.scale = Vector2.ONE
 	follow_player()
