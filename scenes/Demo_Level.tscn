@@ -705,10 +705,9 @@ position = Vector2( 1178.09, 1207.33 )
 position = Vector2( 1531.31, 1222.58 )
 
 [node name="Enemies" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="Enemy" parent="Enemies" instance=ExtResource( 19 )]
-position = Vector2( 2856, 511 )
+position = Vector2( 2787.98, 509.64 )
 
 [node name="Enemy2" parent="Enemies" instance=ExtResource( 19 )]
 position = Vector2( 2447, 383 )
@@ -736,7 +735,7 @@ position = Vector2( 1559, 431 )
 position = Vector2( 1529, 431 )
 
 [node name="Enemy7" parent="Enemies" instance=ExtResource( 19 )]
-position = Vector2( 1466.43, 763.508 )
+position = Vector2( 1601.33, 766.358 )
 
 [node name="Enemy8" parent="Enemies" instance=ExtResource( 19 )]
 position = Vector2( 2318, 767 )
@@ -757,7 +756,7 @@ position = Vector2( 3138, 643 )
 position = Vector2( 3585, 435 )
 
 [node name="Player" parent="." instance=ExtResource( 22 )]
-position = Vector2( 3423.82, 896.686 )
+position = Vector2( 1744.52, 430.224 )
 
 [node name="Dash_upgrade" parent="." instance=ExtResource( 23 )]
 position = Vector2( 3700, 434 )
@@ -809,6 +808,26 @@ deactivate = true
 position = Vector2( 3659.33, 833.661 )
 player_path = NodePath("../../Player")
 line = "Bloody turrets... As if something took them over..."
+
+[node name="Speech_Trigger_friend_dead" parent="Objects" instance=ExtResource( 28 )]
+position = Vector2( 2068.04, 765.928 )
+player_path = NodePath("../../Player")
+line = "Please be alive,,, please be alive...."
+
+[node name="Speech_Trigger_now_what" parent="Objects" instance=ExtResource( 28 )]
+position = Vector2( 3565.88, 1087.44 )
+player_path = NodePath("../../Player")
+line = "Great... now what?"
+
+[node name="Speech_Trigger_wtf" parent="Objects" instance=ExtResource( 28 )]
+position = Vector2( 2952.35, 513.365 )
+player_path = NodePath("../../Player")
+line = "What... the... fuck..."
+
+[node name="Speech_Trigger_die_goo" parent="Objects" instance=ExtResource( 28 )]
+position = Vector2( 1611.41, 495.36 )
+player_path = NodePath("../../Player")
+line = "Die, walking goo... Die!"
 
 [node name="Checkpoints" type="Node" parent="."]
 editor/display_folded = true
