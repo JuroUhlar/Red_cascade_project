@@ -756,7 +756,7 @@ position = Vector2( 3138, 643 )
 position = Vector2( 3585, 435 )
 
 [node name="Player" parent="." instance=ExtResource( 22 )]
-position = Vector2( 3026.52, 509.584 )
+position = Vector2( 1826, 762.168 )
 
 [node name="Dash_upgrade" parent="." instance=ExtResource( 23 )]
 position = Vector2( 3700, 434 )
@@ -828,6 +828,12 @@ line = "What... the... fuck..."
 position = Vector2( 1611.41, 495.36 )
 player_path = NodePath("../../Player")
 line = "Die, walking goo... Die!"
+
+[node name="Speech_Trigger_oh_no" parent="Objects" instance=ExtResource( 28 )]
+position = Vector2( 2784.09, 1088.29 )
+player_path = NodePath("../../Player")
+triggerable = false
+line = "Oh no... "
 
 [node name="Checkpoints" type="Node" parent="."]
 
@@ -901,6 +907,7 @@ position = Vector2( 2711.43, 1336.58 )
 script = ExtResource( 36 )
 enemy_boss_path = NodePath("EnemyBoss")
 friendPath = NodePath("../Friend")
+speech_trigger_path = NodePath("../Objects/Speech_Trigger_oh_no")
 wall_enemies = [ NodePath("Enemy_wall"), NodePath("Enemy_wall2"), NodePath("Enemy_wall3") ]
 
 [node name="Final_button" parent="Final_scenario_stuff" instance=ExtResource( 26 )]

@@ -2,6 +2,7 @@ extends Node2D
 
 export (NodePath) var enemy_boss_path
 export (NodePath) var friendPath
+export (NodePath) var speech_trigger_path
 export (Array, NodePath) var wall_enemies
 var friend
 
@@ -14,6 +15,9 @@ func _ready():
 func activate():
 	var friend_position = friend.global_position
 	friend.queue_free()
+	
+	var speech_trigger = get_node(speech_trigger_path)
+	if (speech_trigger): speech_trigger.activate()
 	
 	var enemy_boss = get_node(enemy_boss_path)
 	
