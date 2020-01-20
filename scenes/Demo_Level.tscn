@@ -756,7 +756,7 @@ position = Vector2( 3138, 643 )
 position = Vector2( 3585, 435 )
 
 [node name="Player" parent="." instance=ExtResource( 22 )]
-position = Vector2( 2003.68, 1081.5 )
+position = Vector2( 2259.19, 382.658 )
 
 [node name="Dash_upgrade" parent="." instance=ExtResource( 23 )]
 position = Vector2( 3700, 434 )
@@ -911,7 +911,7 @@ speech_trigger_path = NodePath("../Objects/Speech_Trigger_oh_no")
 wall_enemies = [ NodePath("Enemy_wall"), NodePath("Enemy_wall2"), NodePath("Enemy_wall3") ]
 
 [node name="Final_button" parent="Final_scenario_stuff" instance=ExtResource( 26 )]
-position = Vector2( 354.674, -27.279 )
+position = Vector2( 163.452, -251.331 )
 targetPath = NodePath("..")
 
 [node name="Enemy_wall" parent="Final_scenario_stuff" instance=ExtResource( 20 )]

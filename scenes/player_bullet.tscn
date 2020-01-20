@@ -1,10 +1,12 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scripts/player_bullet.gd" type="Script" id=1]
 [ext_resource path="res://assets/Projectile/player-projectile.png" type="Texture" id=2]
 [ext_resource path="res://assets/Projectile/bullet_explode_0.png" type="Texture" id=3]
 [ext_resource path="res://assets/Projectile/bullet_explode_1.png" type="Texture" id=4]
 [ext_resource path="res://assets/Projectile/bullet_explode_2.png" type="Texture" id=5]
+[ext_resource path="res://assets/Projectile/bullet_explode_3.png" type="Texture" id=6]
+[ext_resource path="res://scenes/Blood.tscn" type="PackedScene" id=7]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -13,7 +15,7 @@ animations = [ {
 "name": "default",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ) ],
+"frames": [ ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ) ],
 "loop": false,
 "name": "impact",
 "speed": 30.0
@@ -42,6 +44,13 @@ autostart = true
 position = Vector2( -2.12515, -0.939346 )
 scale = Vector2( 0.385248, 0.190052 )
 rect = Rect2( -10, -10, 30, 30 )
+
+[node name="Particles2D" parent="." instance=ExtResource( 7 )]
+position = Vector2( -0.0288763, -0.115984 )
+
+[node name="death_timer" type="Timer" parent="."]
+one_shot = true
 [connection signal="body_entered" from="." to="." method="_on_player_bullet_body_entered"]
 [connection signal="timeout" from="lifetime_timer" to="." method="_on_lifetime_timer_timeout"]
 [connection signal="screen_exited" from="VisibilityNotifier2D" to="." method="_on_VisibilityNotifier2D_screen_exited"]
+[connection signal="timeout" from="death_timer" to="." method="_on_death_timer_timeout"]
