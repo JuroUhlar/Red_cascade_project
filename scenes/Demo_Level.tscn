@@ -756,7 +756,7 @@ position = Vector2( 3138, 643 )
 position = Vector2( 3585, 435 )
 
 [node name="Player" parent="." instance=ExtResource( 22 )]
-position = Vector2( 1744.52, 430.224 )
+position = Vector2( 3026.52, 509.584 )
 
 [node name="Dash_upgrade" parent="." instance=ExtResource( 23 )]
 position = Vector2( 3700, 434 )
@@ -830,7 +830,6 @@ player_path = NodePath("../../Player")
 line = "Die, walking goo... Die!"
 
 [node name="Checkpoints" type="Node" parent="."]
-editor/display_folded = true
 
 [node name="Checkpoint" parent="Checkpoints" instance=ExtResource( 29 )]
 position = Vector2( 2216.45, 1083.45 )
@@ -851,7 +850,7 @@ position = Vector2( 2989.16, 507.484 )
 position = Vector2( 2432.23, 378.963 )
 
 [node name="Checkpoint7" parent="Checkpoints" instance=ExtResource( 29 )]
-position = Vector2( 1781.7, 428.15 )
+position = Vector2( 1769.09, 426.588 )
 
 [node name="Checkpoint8" parent="Checkpoints" instance=ExtResource( 29 )]
 position = Vector2( 2156.8, 759.881 )

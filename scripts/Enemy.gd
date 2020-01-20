@@ -18,6 +18,7 @@ func _ready():
 		$CollisionShape2D.scale = Vector2.ZERO
 	else:
 		$Sprite.play("spawn")
+		$enemy_walking.playing = true
 		add_to_group("enemies")
 		$CollisionShape2D.scale = Vector2.ONE
 		$nav_timer.start()
@@ -60,6 +61,7 @@ func die():
 	queue_free()
 
 func activate():
+	$enemy_walking.playing = true
 	$Sprite.play("spawn")
 	yield($Sprite, "animation_finished")
 	add_to_group("enemies")
