@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://scripts/Button.gd" type="Script" id=1]
 [ext_resource path="res://assets/Button/button_0.png" type="Texture" id=2]
 [ext_resource path="res://assets/Button/button_1.png" type="Texture" id=3]
 [ext_resource path="res://assets/UI/button-hint-Y1.png" type="Texture" id=4]
 [ext_resource path="res://assets/UI/button-hint-Y2.png" type="Texture" id=5]
+[ext_resource path="res://assets/sounds/button1.wav" type="AudioStream" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -56,5 +57,8 @@ position = Vector2( 0.581136, 2.80882 )
 scale = Vector2( 3.03397, 2.73372 )
 process_parent = true
 physics_process_parent = true
+
+[node name="button_sound" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 6 )
 [connection signal="body_entered" from="." to="." method="_on_Button_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_Button_body_exited"]
