@@ -35,6 +35,7 @@ func _physics_process(delta):
 					
 			if $gun_timer.time_left <= 0: 
 				shoot()
+				$tower_shot.play()
 				
 	if shooting: muzzle_sprite.play("shoot")
 	else: muzzle_sprite.play("default")
