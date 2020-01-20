@@ -25,7 +25,7 @@ animations = [ {
 "frames": [ ExtResource( 4 ), ExtResource( 5 ) ],
 "loop": true,
 "name": "interact",
-"speed": 1.0
+"speed": 5.0
 } ]
 
 [node name="Friend" type="StaticBody2D"]
@@ -54,6 +54,7 @@ shape = SubResource( 3 )
 visible = false
 frames = SubResource( 4 )
 animation = "interact"
+frame = 1
 playing = true
 offset = Vector2( 0, -30 )
 

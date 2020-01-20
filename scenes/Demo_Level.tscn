@@ -793,7 +793,7 @@ deactivate = true
 position = Vector2( 2017.61, 752.886 )
 
 [node name="Button_fire_suppresion" parent="Objects/Door_back_to_friend" instance=ExtResource( 26 )]
-position = Vector2( -89.02, 15.16 )
+position = Vector2( -97.61, 15.16 )
 toggle = false
 targetPath = NodePath("../../../CanvasLayer/Dialogue_water_button")
 
