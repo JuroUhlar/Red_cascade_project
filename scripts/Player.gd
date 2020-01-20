@@ -230,6 +230,10 @@ func camera_shake_explosion():
 	var frequency = 26
 	var amplitude = 12
 	$Camera2D.shake(duration,frequency,amplitude)
+	
+func talk(line):
+	$Speech_bubble.text = line
+	$AnimationPlayer.play("speak")
 
 
 
