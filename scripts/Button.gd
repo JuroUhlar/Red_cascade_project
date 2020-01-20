@@ -32,9 +32,9 @@ func _process(delta):
 		press()
 		
 func press():
+	$button_sound.play()
 	if(!toggle) and !active:
 		activate()
-		$button_sound.play()
 	if(toggle):
 		if(active): deactivate()
 		else: activate() 
