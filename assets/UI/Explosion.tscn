@@ -33,4 +33,5 @@ anchor_bottom = 1.0
 anims/Explode = SubResource( 1 )
 
 [node name="explosion_sound" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( 309.739, 1672.59 )
 stream = ExtResource( 2 )
