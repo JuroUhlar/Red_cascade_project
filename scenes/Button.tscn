@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://scripts/Button.gd" type="Script" id=1]
 [ext_resource path="res://assets/Button/button_0.png" type="Texture" id=2]
 [ext_resource path="res://assets/Button/button_1.png" type="Texture" id=3]
+[ext_resource path="res://assets/UI/new_dynamicfont.tres" type="DynamicFont" id=4]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -33,12 +34,11 @@ position = Vector2( 0, 2.75379 )
 shape = SubResource( 2 )
 
 [node name="Hint" type="Label" parent="."]
-visible = false
-margin_left = -13.4421
-margin_top = -15.271
-margin_right = 41.5579
-margin_bottom = -1.271
-rect_scale = Vector2( 0.5, 0.5 )
+margin_left = -22.7858
+margin_top = -22.8627
+margin_right = 32.2142
+margin_bottom = -8.86273
+custom_fonts/font = ExtResource( 4 )
 text = "[V] Press"
 
 [node name="VisibilityEnabler2D" type="VisibilityEnabler2D" parent="."]
