@@ -176,7 +176,7 @@ func _on_dash_timer_timeout():
 
 func _on_ghost_timer_timeout():
 	if dashing:
-		var this_ghost = preload("res://Scenes/Ghost.tscn").instance()
+		var this_ghost = preload("res://scenes/Ghost.tscn").instance()
 		get_parent().add_child(this_ghost)
 		this_ghost.position = position
 		this_ghost.texture = $Sprite.frames.get_frame($Sprite.animation, $Sprite.frame)
