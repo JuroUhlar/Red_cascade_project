@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/fire_crackle.wav-e01dc79abc2d58c08858c24d091d0934.sample"
+
+[deps]
+
+source_file="res://assets/sounds/fire_crackle.wav"
+dest_files=[ "res://.import/fire_crackle.wav-e01dc79abc2d58c08858c24d091d0934.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=true
+compress/mode=0

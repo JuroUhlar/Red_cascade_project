@@ -48,6 +48,7 @@ func take_damage(damage):
 		die()
 	else:
 		$AnimationPlayer.play("hurt")
+		$goo_damaged.play()
 		
 		
 func die():
@@ -56,6 +57,7 @@ func die():
 	$CollisionShape2D.scale = Vector2.ZERO
 	remove_from_group("enemies")
 	$Sprite.play("die")
+	$goo_death.play()
 	yield($Sprite, "animation_finished")
 	activate_targets()
 	queue_free()

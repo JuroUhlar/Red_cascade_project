@@ -115,6 +115,7 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("jump") :
 			can_jump = false;
 			jump_trigger_tolerance_timer.start()
+			$player_jump.play()
 	
 		if (is_on_floor() == false) and (grounded_last_frame == true) :
 			grounded_tolerance_timer.start()
@@ -164,6 +165,7 @@ func is_grounded():
 	
 func jumped():
 	return jump_trigger_tolerance_timer.time_left > 0 or Input.is_action_just_pressed("jump")
+	
 
 func _on_dash_timer_timeout():
 	dashing = false
@@ -204,6 +206,7 @@ func die():
 	
 func take_damage(damage):
 	$AnimationPlayer.play("hurt")
+	$player_damaged.play()
 	hp -= damage
 	if hp <= 0:
 		die()

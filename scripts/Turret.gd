@@ -64,6 +64,7 @@ func deploy():
 	
 func take_damage(damage):
 	$AnimationPlayer.play("damaged")
+	$tower_damaged.play()
 	hp -= damage
 	if !deployed: deploy()
 	if hp <= 0:
