@@ -72,7 +72,7 @@ func take_damage(damage):
 		
 func die():
 	$CollisionShape2D.scale = Vector2.ZERO
-	$CollisionShape2D.disabled = true
+#	$CollisionShape2D.disabled = true
 	dead = true
 	$Sprite.play("die")
 	$tower_destroyed.play()

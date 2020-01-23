@@ -3,15 +3,15 @@ extends StaticBody2D
 export var open = false;
 
 func _ready():
-	if (open): open()	
+	if (open): openDoor()	
 
 func activate():
-	open()
+	openDoor()
 	
 func deactivate():
 	close()
 
-func open():
+func openDoor():
 	$AnimatedSprite.play("open")
 	# $CollisionShape2D.disabled = true
 	$CollisionShape2D.scale = Vector2.ZERO

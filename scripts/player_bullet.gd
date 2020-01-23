@@ -24,7 +24,8 @@ func _on_player_bullet_body_entered(body):
 	if(body.is_in_group("dashing")):
 		return
 	else:
-		$CollisionShape2D.disabled = true
+#		$CollisionShape2D.disabled = true
+		$CollisionShape2D.scale = Vector2.ZERO
 		if(body.is_in_group("damageable")):
 			body.take_damage(damage)
 		$Sprite.play("impact")

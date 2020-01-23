@@ -54,7 +54,7 @@ func take_damage(damage):
 		
 func die():
 	dying = true
-	$CollisionShape2D.disabled = true
+#	$CollisionShape2D.disabled = true
 	$CollisionShape2D.scale = Vector2.ZERO
 	remove_from_group("enemies")
 	$Sprite.play("die")
@@ -67,7 +67,7 @@ func activate():
 	$enemy_walking.playing = true
 	$Sprite.play("spawn")
 	yield($Sprite, "animation_finished")
-	if ($AnimationPlayer): $AnimationPlayer.play("spawn")
+	if (is_boss): $AnimationPlayer.play("spawn")
 	add_to_group("enemies")
 	$CollisionShape2D.scale = Vector2.ONE
 	follow_player()
