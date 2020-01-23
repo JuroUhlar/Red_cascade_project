@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://assets/UI/dialogue_font.tres" type="Theme" id=1]
 [ext_resource path="res://scripts/Dialogue.gd" type="Script" id=2]
 [ext_resource path="res://assets/UI/dasfsdf.png" type="Texture" id=3]
 [ext_resource path="res://assets/UI/avatar.png" type="Texture" id=4]
+[ext_resource path="res://assets/sounds/text_boxes.wav" type="AudioStream" id=5]
+[ext_resource path="res://assets/sounds/radio_with_voice.wav" type="AudioStream" id=6]
 
 [sub_resource type="StreamTexture" id=1]
 
@@ -102,6 +104,15 @@ one_shot = true
 
 [node name="delay_timer" type="Timer" parent="."]
 one_shot = true
+
+[node name="click" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+volume_db = -15.0
+
+[node name="radio_noise" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 6 )
+volume_db = -15.857
+pitch_scale = 0.9
 [connection signal="pressed" from="Panel/MarginContainer/VBoxContainer/HBoxContainer2/Button" to="." method="_on_Button_pressed"]
 [connection signal="timeout" from="dismissable_timer" to="." method="_on_dismissable_timer_timeout"]
 [connection signal="timeout" from="delay_timer" to="." method="_on_delay_timer_timeout"]

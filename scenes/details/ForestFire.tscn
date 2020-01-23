@@ -1,10 +1,11 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://scripts/ForestFire.gd" type="Script" id=1]
 [ext_resource path="res://assets/Background/forest-fire1.png" type="Texture" id=2]
 [ext_resource path="res://assets/Background/forest-fire2.png" type="Texture" id=3]
 [ext_resource path="res://assets/Background/forest-fire3.png" type="Texture" id=4]
 [ext_resource path="res://assets/Background/forest-fire4.png" type="Texture" id=5]
+[ext_resource path="res://assets/sounds/fire_crackle.wav" type="AudioStream" id=6]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -29,9 +30,20 @@ tracks/0/keys = {
 "update": 0,
 "values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0 ) ]
 }
+tracks/1/type = "value"
+tracks/1/path = NodePath("fire_cracking:max_distance")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 1, 2 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ 500.0, 1.0 ]
+}
 
 [node name="Forest_fire" type="Node2D"]
-modulate = Color( 1, 1, 1, 0.9 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_group_": true
@@ -52,3 +64,10 @@ scale = Vector2( 48.663, 6.67018 )
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 anims/put_out = SubResource( 2 )
+
+[node name="fire_cracking" type="AudioStreamPlayer2D" parent="."]
+position = Vector2( -148.356, 3.59344 )
+scale = Vector2( 200, 24.16 )
+stream = ExtResource( 6 )
+autoplay = true
+max_distance = 500.0

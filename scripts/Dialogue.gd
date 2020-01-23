@@ -38,6 +38,7 @@ func activate():
 		start_dialogue()
 
 func pressed():
+	$click.play()
 	if lineIndex < lineCount - 1:
 		lineIndex += 1
 		updateDialogue()
@@ -53,6 +54,8 @@ func updateDialogue():
 	avatar.texture = avatarTextures[lineIndex]
 	
 func start_dialogue():
+	$click.play()
+	$radio_noise.play()
 	visible = true
 	get_tree().paused = true
 	updateDialogue()
@@ -66,6 +69,7 @@ func getButtonText():
 		return "Next"
 
 func closeDialogue():
+	$radio_noise.stop()
 	visible = false
 	dismissable = false
 	lineIndex = 0

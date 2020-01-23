@@ -68,6 +68,7 @@ func _physics_process(delta):
 			$dash.play()
 			
 		jumping = can_jump and jumped() and is_grounded()
+		if jumping: $player_jump.play()
 		
 		if Input.is_action_pressed("shoot") and !shooting and can_shoot:
 			shooting = true
@@ -116,7 +117,6 @@ func _physics_process(delta):
 		if Input.is_action_just_pressed("jump") :
 			can_jump = false;
 			jump_trigger_tolerance_timer.start()
-			$player_jump.play()
 	
 		if (is_on_floor() == false) and (grounded_last_frame == true) :
 			grounded_tolerance_timer.start()
