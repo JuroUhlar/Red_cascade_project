@@ -3,6 +3,7 @@ extends Actor
 export var speed = Vector2(100,200)
 export var hp = 30
 export var active = false
+export var is_boss = false
 
 export (Array, NodePath) var death_trigger_target_Paths
 
@@ -12,7 +13,7 @@ func _ready():
 	_velocity.x = speed.x
 	set_physics_process(false)
 #	add_to_group("enemies")
-	add_to_group("damageable")
+	if(!is_boss): add_to_group("damageable")
 	if(!active):
 		$Sprite.play("dormant")
 		$CollisionShape2D.scale = Vector2.ZERO
@@ -66,8 +67,8 @@ func activate():
 	$enemy_walking.playing = true
 	$Sprite.play("spawn")
 	yield($Sprite, "animation_finished")
-	add_to_group("enemies")
 	if ($AnimationPlayer): $AnimationPlayer.play("spawn")
+	add_to_group("enemies")
 	$CollisionShape2D.scale = Vector2.ONE
 	follow_player()
 	$nav_timer.start()
@@ -98,3 +99,8 @@ func activate_targets():
 	for target in targets:
 		target.activate()
 	
+
+func _on_AnimationPlayer_animation_finished(anim):
+	if anim == "spawn":
+		print("Boss damageable")
+		add_to_group("damageable")

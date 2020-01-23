@@ -60,6 +60,7 @@ func _physics_process(delta):
 	
 		if dash_enabled and Input.is_action_just_pressed("dash") and $dash_cooldown.time_left <= 0:
 			dashing = true
+			shooting = false
 			add_to_group("dashing")
 			dashing_direction = get_dash_direction()
 			dashing_velocity = calculate_dash_velocity(dashing_direction, speed, dash_speed_multiplier, dash_jump_multiplier)

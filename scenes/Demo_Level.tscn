@@ -547,7 +547,7 @@ position = Vector2( 1919.67, 611.846 )
 z_index = 1
 
 [node name="Forest_goo" parent="Level" instance=ExtResource( 3 )]
-position = Vector2( 2558.32, 225.107 )
+position = Vector2( 1928.29, 617.282 )
 
 [node name="Water" parent="Level" instance=ExtResource( 4 )]
 position = Vector2( 1928.64, 564.381 )
@@ -753,7 +753,7 @@ position = Vector2( 3138, 643 )
 position = Vector2( 3585, 435 )
 
 [node name="Player" parent="." instance=ExtResource( 22 )]
-position = Vector2( 2727.94, 1085.33 )
+position = Vector2( 1787.13, 764.567 )
 
 [node name="Dash_upgrade" parent="." instance=ExtResource( 23 )]
 position = Vector2( 3700, 434 )

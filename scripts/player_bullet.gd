@@ -20,14 +20,10 @@ func _physics_process(delta):
 func _on_lifetime_timer_timeout():
 	queue_free()
 
-func _on_VisibilityNotifier2D_screen_exited():
-	queue_free()
-
 func _on_player_bullet_body_entered(body):
 	if(body.is_in_group("dashing")):
 		return
-	else: 
-		print("Bullet Collision")
+	else:
 		$CollisionShape2D.disabled = true
 		if(body.is_in_group("damageable")):
 			body.take_damage(damage)

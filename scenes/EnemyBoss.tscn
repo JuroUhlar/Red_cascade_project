@@ -48,6 +48,7 @@ tracks/1/keys = {
 
 [node name="EnemyBoss" instance=ExtResource( 1 )]
 hp = 80
+is_boss = true
 
 [node name="CollisionShape2D" parent="." index="0"]
 position = Vector2( 0, 3 )
@@ -75,3 +76,4 @@ cast_to = Vector2( 200, 0 )
 [node name="AnimationPlayer" parent="." index="7"]
 anims/hurt = SubResource( 1 )
 anims/spawn = SubResource( 2 )
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
