@@ -198,6 +198,7 @@ func die():
 		$CollisionShape2D.disabled = true
 		$CollisionShape2D.scale = Vector2.ZERO
 		$Sprite.play("die")
+		$player_dead.play()
 		yield($Sprite, "animation_finished")
 		$death_timer.start()
 	

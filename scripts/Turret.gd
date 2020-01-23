@@ -56,6 +56,7 @@ func shoot():
 
 func deploy():
 	$Sprite.play("deploy")
+	$tower_deploy.play() # tower deploy sound
 	yield($Sprite, "animation_finished")
 	$RayCast_left.cast_to = Vector2(-sensor_range, 0)
 	$RayCast_right.cast_to = Vector2(sensor_range, 0)

@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/tower_deploy.wav-e95bb2d7635e1bd60907f7a175758f7f.sample"
+
+[deps]
+
+source_file="res://assets/sounds/tower_deploy.wav"
+dest_files=[ "res://.import/tower_deploy.wav-e95bb2d7635e1bd60907f7a175758f7f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
