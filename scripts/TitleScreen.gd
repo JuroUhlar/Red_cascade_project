@@ -13,6 +13,12 @@ func _physics_process(_delta):
 		$VBoxContainer/Quit.grab_focus()
 		if Input.is_action_just_pressed("shoot") or Input.is_action_just_pressed("jump"):
 			get_tree().quit()
+			
+	if $VBoxContainer/HowToPlay.is_hovered() == true:
+		$VBoxContainer/HowToPlay.grab_focus()
+		if Input.is_action_just_pressed("shoot") or Input.is_action_just_pressed("jump"):
+			$Control_scheme.visible = true
+		
 
 func _on_NewGame_pressed():
 # warning-ignore:return_value_discarded
@@ -20,3 +26,7 @@ func _on_NewGame_pressed():
 	
 func _on_Quit_pressed():
 	get_tree().quit()
+
+
+func _on_HowToPlay_pressed():
+	$Control_scheme.visible = true
