@@ -75,6 +75,7 @@ func die():
 	$CollisionShape2D.disabled = true
 	dead = true
 	$Sprite.play("die")
+	$tower_destroyed.play()
 	yield($Sprite, "animation_finished")
 	queue_free()
 	

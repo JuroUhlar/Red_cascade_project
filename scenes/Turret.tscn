@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=2]
+[gd_scene load_steps=29 format=2]
 
 [ext_resource path="res://scripts/Turret.gd" type="Script" id=1]
 [ext_resource path="res://scenes/turret_bullet.tscn" type="PackedScene" id=2]
@@ -22,7 +22,8 @@
 [ext_resource path="res://assets/Turret/turret_deploy7.png" type="Texture" id=20]
 [ext_resource path="res://assets/sounds/tower_shot.wav" type="AudioStream" id=21]
 [ext_resource path="res://assets/sounds/tower_deploy.wav" type="AudioStream" id=22]
-[ext_resource path="res://assets/sounds/tower_damaged.wav" type="AudioStream" id=23]
+[ext_resource path="res://assets/sounds/tower_being_hit.wav" type="AudioStream" id=23]
+[ext_resource path="res://assets/sounds/tower_destroy.wav" type="AudioStream" id=24]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -119,7 +120,7 @@ anims/damaged = SubResource( 4 )
 
 [node name="tower_shot" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 21 )
-volume_db = 5.049
+volume_db = 8.078
 max_distance = 300.0
 
 [node name="tower_deploy" type="AudioStreamPlayer2D" parent="."]
@@ -128,4 +129,9 @@ max_distance = 300.0
 
 [node name="tower_damaged" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 23 )
+max_distance = 400.0
+
+[node name="tower_destroyed" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 24 )
+max_distance = 400.0
 [connection signal="animation_finished" from="muzzle_position/muzzle_sprite" to="." method="_on_muzzle_sprite_animation_finished"]
