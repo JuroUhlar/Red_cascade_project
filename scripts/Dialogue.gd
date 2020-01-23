@@ -64,9 +64,9 @@ func start_dialogue():
 	
 func getButtonText():
 	if lineIndex == lineCount - 1:
-		return "Close"
+		return "[S] Close"
 	else:
-		return "Next"
+		return "[S] Next"
 
 func closeDialogue():
 	$radio_noise.stop()
