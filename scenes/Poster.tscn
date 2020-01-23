@@ -1,11 +1,10 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Poster.gd" type="Script" id=1]
 [ext_resource path="res://assets/Background/mars-first-small.png" type="Texture" id=2]
-[ext_resource path="res://assets/UI/button-hint-Y1.png" type="Texture" id=3]
-[ext_resource path="res://assets/UI/button-hint-Y2.png" type="Texture" id=4]
+[ext_resource path="res://assets/UI/button-hint-interact1.png" type="Texture" id=3]
+[ext_resource path="res://assets/UI/button-hint-interact2.png" type="Texture" id=4]
 [ext_resource path="res://assets/Background/mars-first-big.png" type="Texture" id=5]
-[ext_resource path="res://assets/UI/new_dynamicfont.tres" type="DynamicFont" id=6]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 24.7076, 34.8362 )
@@ -55,11 +54,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-margin_left = -20.3269
-margin_top = -26.4851
-margin_right = 23.6731
-margin_bottom = -12.485
-custom_fonts/font = ExtResource( 6 )
-text = "[V] Close"
+margin_left = -52.6675
+margin_top = -24.4318
+margin_right = 54.3325
+margin_bottom = -10.4316
+text = "(Y) or [S] to Close"
 [connection signal="body_entered" from="player_detector" to="." method="_on_player_detector_body_entered"]
 [connection signal="body_exited" from="player_detector" to="." method="_on_player_detector_body_exited"]
