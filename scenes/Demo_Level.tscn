@@ -1,4 +1,4 @@
-[gd_scene load_steps=97 format=2]
+[gd_scene load_steps=98 format=2]
 
 [ext_resource path="res://assets/Background/rc-level-demo-preview2.png" type="Texture" id=1]
 [ext_resource path="res://scenes/details/ForestFire.tscn" type="PackedScene" id=2]
@@ -40,7 +40,8 @@
 [ext_resource path="res://scripts/Final_scenario.gd" type="Script" id=38]
 [ext_resource path="res://scenes/EnemyBoss.tscn" type="PackedScene" id=39]
 [ext_resource path="res://scenes/Enemy_spawn_point.tscn" type="PackedScene" id=40]
-[ext_resource path="res://assets/sounds/gameplay_music.wav" type="AudioStream" id=41]
+[ext_resource path="res://Final_checkpoint.tscn" type="PackedScene" id=41]
+[ext_resource path="res://assets/sounds/gameplay_music.wav" type="AudioStream" id=42]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 76, 10 )
@@ -757,7 +758,7 @@ position = Vector2( 3138, 643 )
 position = Vector2( 3585, 435 )
 
 [node name="Player" parent="." instance=ExtResource( 22 )]
-position = Vector2( 361.422, 1243.78 )
+position = Vector2( 317.693, 1239.11 )
 
 [node name="Dash_upgrade" parent="." instance=ExtResource( 23 )]
 position = Vector2( 3700, 434 )
@@ -936,11 +937,13 @@ active = false
 wall_on_right = true
 
 [node name="EnemyBoss" parent="Final_scenario_stuff" instance=ExtResource( 39 )]
+position = Vector2( 1.90015, 0 )
 hp = 100
-death_trigger_target_Paths = [ NodePath("../../Objects/Door_final"), NodePath("../Enemy_spawn_point"), NodePath("../upper_spawn_point_trigger") ]
+death_trigger_target_Paths = [ NodePath("../../Objects/Door_final"), NodePath("../Enemy_spawn_point"), NodePath("../upper_spawn_point_trigger"), NodePath("../Final checkpoint") ]
 
 [node name="Enemy_spawn_point" parent="Final_scenario_stuff" instance=ExtResource( 40 )]
 position = Vector2( -373.86, -253.018 )
+reactivate_on_player_death = true
 
 [node name="Enemy_spawn_point2" parent="Final_scenario_stuff" instance=ExtResource( 40 )]
 position = Vector2( 558.397, -382.911 )
@@ -950,6 +953,7 @@ max_enemies = 4
 position = Vector2( 316.151, -246.35 )
 targetPath = NodePath("../Enemy_spawn_point2")
 triggerable = false
+one_time = false
 
 [node name="Door_final_safe" parent="Final_scenario_stuff" instance=ExtResource( 16 )]
 position = Vector2( 770.57, -263.58 )
@@ -972,7 +976,12 @@ position = Vector2( 1467.57, -263.58 )
 position = Vector2( 1320.4, -249.043 )
 targetPath = NodePath("../../CanvasLayer/End_screen")
 
+[node name="Final checkpoint" parent="Final_scenario_stuff" instance=ExtResource( 41 )]
+position = Vector2( 171, -254.601 )
+
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 41 )
+stream = ExtResource( 42 )
 volume_db = -10.097
 autoplay = true
+[connection signal="player_dead" from="Player" to="Final_scenario_stuff/Enemy_spawn_point2" method="_on_Player_player_dead"]
+[connection signal="player_dead" from="Player" to="Final_scenario_stuff/Enemy_spawn_point" method="_on_Player_player_dead"]

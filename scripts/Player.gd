@@ -2,6 +2,8 @@ extends Actor
 
 export var speed: = Vector2(200.0, 500.0)
 
+signal player_dead
+
 onready var grounded_tolerance_timer = get_node("grounded_tolerance_timer")
 onready var jump_trigger_tolerance_timer = get_node("jump_trigger_tolerance_timer")
 onready var gun_muzzle_sprite = get_node("gun_muzzle/muzzle_sprite")
@@ -204,6 +206,7 @@ func die():
 		$player_dead.play()
 		yield($Sprite, "animation_finished")
 		$death_timer.start()
+		
 	
 func take_damage(damage):
 	$AnimationPlayer.play("hurt")
@@ -213,6 +216,7 @@ func take_damage(damage):
 		die()
 
 func _on_death_timer_timeout():
+	emit_signal("player_dead")
 	hp = 30
 	$death_timer.stop()
 	$CollisionShape2D.disabled = false
