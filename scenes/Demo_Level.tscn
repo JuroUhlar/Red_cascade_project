@@ -757,7 +757,7 @@ position = Vector2( 3138, 643 )
 position = Vector2( 3585, 435 )
 
 [node name="Player" parent="." instance=ExtResource( 22 )]
-position = Vector2( 561.899, 1246.64 )
+position = Vector2( 361.422, 1243.78 )
 
 [node name="Dash_upgrade" parent="." instance=ExtResource( 23 )]
 position = Vector2( 3700, 434 )
@@ -834,7 +834,7 @@ line = "Die, walking goo... Die!"
 position = Vector2( 2784.09, 1088.29 )
 player_path = NodePath("../../Player")
 triggerable = false
-line = "Oh no... Martin..."
+line = "Oh no... Tom..."
 
 [node name="Hint_trigger_shoot" parent="Objects" instance=ExtResource( 29 )]
 position = Vector2( 3292.06, 917.519 )
@@ -873,7 +873,7 @@ pause_mode = 2
 
 [node name="Dialogue_friend_primary" parent="CanvasLayer" instance=ExtResource( 32 )]
 visible = false
-texts = [ "Good to see you buddy! We are fucked!", "Martin! Are you alright? Your leg...", "Yeah... I am not going anywhere... But you have to. There is fire in the vegetation module.", "I will go activate fire suppression manually.", "Yeah, do that. Lots of things around here run on oxygen. We might already be dead and not even know it.", "I will go fast. Stay on the radio." ]
+texts = [ "Good to see you buddy! We are fucked!", "Tom! Are you alright? Your leg...", "Yeah... I am not going anywhere... But you have to. There is fire in the vegetation module.", "I will go activate fire suppression manually.", "Yeah, do that. Lots of things around here run on oxygen. We might already be dead and not even know it.", "I will go fast. Stay on the radio." ]
 avatarTextures = [ ExtResource( 33 ), ExtResource( 34 ), ExtResource( 33 ), ExtResource( 34 ), ExtResource( 33 ), ExtResource( 34 ) ]
 
 [node name="Dialogue_friend_secondary" parent="CanvasLayer" instance=ExtResource( 32 )]
