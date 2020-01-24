@@ -28,6 +28,7 @@ func _on_Continue_pressed():
 
 func _on_Restart_button_pressed():
 	get_tree().paused = false
+	Global._ready()
 	get_tree().reload_current_scene()
 	
 func _on_Main_menu_button_pressed():

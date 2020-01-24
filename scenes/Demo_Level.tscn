@@ -759,6 +759,7 @@ position = Vector2( 3585, 435 )
 
 [node name="Player" parent="." instance=ExtResource( 22 )]
 position = Vector2( 317.693, 1239.11 )
+dash_enabled = false
 
 [node name="Dash_upgrade" parent="." instance=ExtResource( 23 )]
 position = Vector2( 3700, 434 )
@@ -983,5 +984,5 @@ position = Vector2( 171, -254.601 )
 stream = ExtResource( 42 )
 volume_db = -10.097
 autoplay = true
-[connection signal="player_dead" from="Player" to="Final_scenario_stuff/Enemy_spawn_point2" method="_on_Player_player_dead"]
 [connection signal="player_dead" from="Player" to="Final_scenario_stuff/Enemy_spawn_point" method="_on_Player_player_dead"]
+[connection signal="player_dead" from="Player" to="Final_scenario_stuff/Enemy_spawn_point2" method="_on_Player_player_dead"]
