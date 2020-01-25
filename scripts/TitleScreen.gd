@@ -22,11 +22,24 @@ func _physics_process(_delta):
 
 func _on_NewGame_pressed():
 # warning-ignore:return_value_discarded
+	$click.play()
 	get_tree().change_scene("res://scenes/Demo_Level.tscn")
 	
 func _on_Quit_pressed():
+	$click.play()
 	get_tree().quit()
 
 
 func _on_HowToPlay_pressed():
+	$click.play()
 	$Control_scheme.visible = true
+
+
+func _on_NewGame_focus_entered():
+	$click.play()
+
+func _on_HowToPlay_focus_entered():
+	$click.play()
+
+func _on_Quit_focus_entered():
+	$click.play()
